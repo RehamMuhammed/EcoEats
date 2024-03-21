@@ -29,7 +29,7 @@ const Navbar = ({toggle , setToggle}) => {
         </div>
       </div>
       <ul>  
-        <li><Link className="nav-link" to="/login">Hello</Link></li>
+        <li><Link className="nav-link" to="/login">Login</Link></li>
         <li><Link className="nav-link" to="/signup">Signup</Link></li>
         <li><Link className="nav-link" to="/aboutus">About Us</Link></li>
         <li><Link className="nav-link" to="/contactus">Contact Us</Link></li>
