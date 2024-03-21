@@ -31,7 +31,7 @@ const [toggle ,setToggle] = useState(false);
   </div>
     {/* <Header/>
     <About/> */}
-    {/* <DonationThoSoYk/> */}
+    <DonationThoSoYk/>
     <Footer toggle={toggle}/>
     
     </Router>
