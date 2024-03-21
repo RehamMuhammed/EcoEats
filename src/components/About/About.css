@@ -1,0 +1,104 @@
+.imgg {
+     padding-top: 20px;
+    padding-left: 100px;
+    padding-bottom: 20px;
+    display: flex;
+    height: 320px;
+    width: 460px;
+    cursor: pointer;
+}
+
+.text1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 1900px;
+    text-align: center;
+    margin-top: 10px;
+    padding-left: 200px;
+    font-size: 40px;
+}
+
+.text2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-left: 300px;
+    padding-right: 70px;
+    font-size: 19px;
+}
+
+.textt2{
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    background-color: #fff;
+    border: solid;
+    border-color: #cdcdcd;
+    border-radius: 16px;
+    margin: 10%;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.0699999);
+    padding-top: 60px;
+    padding-bottom: 50px;
+    cursor: pointer;
+    margin-bottom: 2%;
+     }
+    
+.charitydon-container {
+    display: flex;
+    background-color: rgb(184, 212, 197);
+}
+
+.someonedon-container {
+    display: flex;
+    background-color: rgb(184, 212, 197);
+    }
+
+.imgg2 {
+    padding-left: 10px;
+    padding-right: 30px;
+    display: flex;
+    height: 320px;
+    width: 460px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    cursor: pointer;
+    padding-top: 60px;
+}
+
+.text11 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 1900px;
+    text-align: center;
+    margin-top: 80px;
+    /* padding-left: 10px; */
+    padding-right: 10px;
+    font-size: 40px;
+}
+
+.text22 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-left: 100px;
+    padding-right: 180px;
+    font-size: 19px;
+}
+
+.textt22 {
+    /* width: 1080px;
+    height: 2080px;
+    border-color: black;
+    margin-top: 55px;
+    padding-left: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 80px; */
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    background-color: #fff;
+    border: solid;
+    border-color: #cdcdcd;
+    border-radius: 16px;
+    margin: 10%;
+    margin-top: 2%;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.0699999);
+    cursor: pointer;
+  
+}

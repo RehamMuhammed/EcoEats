@@ -1,0 +1,50 @@
+.buy{
+    min-height: 100vh;
+    background:linear-gradient(rgba(254, 253, 248, 0.9), rgba(244, 241, 228, 0.9)), url("../../images/bakery.jpg") center/cover no-repeat;
+}
+.buy-content .text-lead{
+    font-size: 18px;
+    padding-left: 540px;
+    margin: 3.2rem 0 4.9rem 0;
+    font-weight: 550;
+    color: #FDA403;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.buy-title{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 90px;
+    font-weight: 900;
+    padding-top: 110px;
+    padding-left: 10px;
+    padding-bottom: 12px;
+    align-self: center!important;
+    -webkit-text-fill-color: #FDA403;
+}
+.buy-btn{
+    align-self: center!important;
+    padding: 12px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-color: #9e9b9b;
+
+}
+.buy-btn:hover{
+    background-color: #FDA403;
+    color: black;
+    /* border-radius: 20px; */
+}
+.buy-btn span{
+    margin-left: 10px;
+    font-size: 18px;
+    color: black;
+    
+}
+
+@media screen and (min-width: 800px){
+    .buy-title{
+        font-size: 100px;
+    }
+    .buy-content *{
+        max-width: 1000px;
+    }
+}
