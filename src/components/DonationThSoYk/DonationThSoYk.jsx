@@ -1,5 +1,6 @@
 import React from "react";
 import "./DonationThSoYk.css";
+import { Link } from "react-router-dom";
 
 const DonationThoSoYk = () => {
     return (
@@ -23,7 +24,7 @@ const DonationThoSoYk = () => {
 	 			<br></br>
 
 				 <label for="familyno"><b>Number of Family Members:</b></label><br></br>
-	 			<input type="number" placeholder="How many family members?"  value="1" name="number" required></input>
+	 			<input type="number" placeholder="1"  min="1" max="100"  name="number" required></input>
 	 			<br></br>
 
 	 			<label for="details"><b>Food Details:</b></label>
@@ -36,9 +37,9 @@ const DonationThoSoYk = () => {
 
 				
 				<p>Quantity of Food:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Upload Photo:</p>
-                      <input type="number" name="quantity" min="1" max="100" value="1" style={{width: '180px'}}></input>
+                      <input type="number" name="quantity" min="1" max="100" placeholder="1" style={{width: '180px'}}></input>
 					  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      <input type="file" class="file-input" id="name" style={{width: '180px'}}></input>
+                      <input type="file" class="file-input" id="name"></input>
 				
 				<br></br>
 				<br></br>
@@ -47,9 +48,10 @@ const DonationThoSoYk = () => {
 	 			<br></br>
 	 			<hr></hr>
 
-	 			<button type="button" class="donbutton button" onClick=""> Back to Home Page </button>
+				<div className="button-gp">
+	 			<Link  class="donbutton button" to="/"> Back to Home Page </Link>
 	 			<button type="button" class="donbutton button" onClick="">Donate Now</button>
-
+				 </div>
 	 		</form>
 	 	</div>
 

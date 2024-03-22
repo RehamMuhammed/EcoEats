@@ -23,6 +23,7 @@ const [toggle ,setToggle] = useState(false);
     <Navbar toggle={toggle} setToggle={setToggle}/>
   <div style={{minHeight: "80vh"}}>
   <Routes>
+      <Route path="/donation-form" element={<DonationThoSoYk/>}/>
       <Route path="/signup" element={<Signup/>}/>
       <Route path="/login" element={<Login/>}/>
       <Route path="/buy" element={<BuyHome/>}/>
@@ -31,7 +32,7 @@ const [toggle ,setToggle] = useState(false);
   </div>
     {/* <Header/>
     <About/> */}
-    <DonationThoSoYk/>
+    {/* <DonationThoSoYk/> */}
     <Footer toggle={toggle}/>
     
     </Router>

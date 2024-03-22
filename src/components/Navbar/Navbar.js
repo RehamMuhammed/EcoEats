@@ -19,14 +19,18 @@ const Navbar = ({toggle , setToggle}) => {
   }
   return (
     <nav style={{backgroundColor : toggle ? "#FDA403" : "#056365"  }}>
+      <div className="left-child">
       <div className="App">
+      <Link to="/">
       <img src={ require('../../images/logo.png')} height={60} width={60} >
     </img>
+    </Link>
       </div>
       <div className="toggle-container" onClick={handleToggleChange}>
         <div className={`toggle-btn ${!toggle ? "disable" : ""}`}>{toggle ? "Buy" : "Donation"}
         {/* <Route path="/Buy" element={<BuyHome/>}/> */}
         </div>
+      </div>
       </div>
       <ul>  
         <li><Link className="nav-link" to="/login">Login</Link></li>

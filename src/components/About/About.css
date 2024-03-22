@@ -102,3 +102,9 @@
     cursor: pointer;
   
 }
+
+.hrr{
+    display: flex;
+    color: black;
+    text-decoration: none;
+}

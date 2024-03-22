@@ -2,6 +2,7 @@ import React from "react";
 import "./About.css";
 import img from "../../images/charityy.png";
 import img2 from "../../images/someoneee.png";
+import { Link } from "react-router-dom";
 
 
 const About = () => {
@@ -30,6 +31,7 @@ const About = () => {
     
     <div className="someonedon-container">
       <div className="textt22">
+      <Link to="/donation-form" className="hrr"> 
         <div className="textonly">
         <h1 className="text11">
           Donation Through Someone You Know
@@ -46,8 +48,10 @@ const About = () => {
         <div className="imgg2">
       <img src={img2} />
       </div>
+      </Link>
       </div>
     </div>
+
     </div>
   );
 };

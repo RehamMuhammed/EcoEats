@@ -4,13 +4,19 @@
     display: flex;  
     justify-content: space-between;
     align-items: center;
-  
   }
   
+  .left-child{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  } 
+
   nav ul {
     list-style-type: none;
     /* margin-top: -55px;
     padding-left: 1095px; */
+    margin-bottom: 0px;
   }
   
   nav li {
@@ -52,7 +58,8 @@
     /* margin-top: 20px; */
     /* left: ; */
     display: flex;
-    margin-right: 1080px;
+    /* margin-right: 50px; */
+    position: relative;
     
     
   }
@@ -75,14 +82,14 @@
     border-radius: 30px;
     position: absolute;
     transition: all 0.2s ease;
-    left: 85px;
-    margin-left: 150px;
+    right: 0%;
+    /* margin-left: 150px; */
 
   }
 
   .disable{
     background-color: #056365;
-    left: 5px;
+    /* left: 5px; */
     width: 140px;
     height: 40px;
     font-weight: bold;
@@ -94,8 +101,7 @@
     padding: 8px 12px;
     border-radius: 30px;
     position: absolute;
-    transition: all 0.1s ease;
-    right: 80px;
-    
+    transition: all 0.2s ease;
+    right: 25%; 
   }
  
