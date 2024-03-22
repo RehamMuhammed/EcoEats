@@ -1,6 +1,6 @@
 .buy{
     min-height: 100vh;
-    background:linear-gradient(rgba(254, 253, 248, 0.9), rgba(244, 241, 228, 0.9)), url("../../images/bakery.jpg") center/cover no-repeat;
+    background:linear-gradient(rgba(142, 142, 137, 0.546), rgba(92, 92, 91, 0.715)), url("../../images/bakerryy.jpg") center/cover no-repeat;
 }
 .buy-content .text-lead{
     font-size: 18px;

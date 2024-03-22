@@ -13,9 +13,10 @@ import { useState } from 'react';
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; 
 import DonationThoSoYk from './components/DonationThSoYk/DonationThSoYk';
+ 
+import app from './FireBase.config';
 
 function App() {
-
 const [toggle ,setToggle] = useState(false);
 
   return (

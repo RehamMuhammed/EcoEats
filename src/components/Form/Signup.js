@@ -3,13 +3,26 @@ import bgImg from '../../images/logo.png';
 import { useForm } from 'react-hook-form';
 import {Link} from 'react-router-dom'; 
 import './Form.css';
+import {createUserWithEmailAndPassword} from 'firebase/auth';
+import auth from '../../FireBase.config';
 
 
 export default function Form() {
 
     const { register, handleSubmit, watch, formState: { errors } } = useForm()
-    const onSubmit = data => console.log(data);
-
+    const onSubmit = async(data) => {
+        // const {email,password,confirmpwd} = data
+        // if (password !== confirmpwd ) {
+        //     console.log("Passwords don't match!")
+        // }      
+        try{ 
+            const user=await createUserWithEmailAndPassword(auth , "habibaahmed19372456@gmail.com" , "1234")
+            console.log("Hehehe Hello!")
+        }
+        catch(error){
+            console.error('Signup error:', error);
+        }
+    };
     // console.log(watch('username'));
     
   return (
