@@ -6,17 +6,20 @@ import './Form.css';
 import {createUserWithEmailAndPassword} from 'firebase/auth';
 import auth from '../../FireBase.config';
 
+// import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+
+// const auth = getAuth();
 
 export default function Form() {
 
     const { register, handleSubmit, watch, formState: { errors } } = useForm()
     const onSubmit = async(data) => {
-        // const {email,password,confirmpwd} = data
-        // if (password !== confirmpwd ) {
-        //     console.log("Passwords don't match!")
-        // }      
+        const {email,password,confirmpwd} = data
+        if (password !== confirmpwd ) {
+            console.log("Passwords don't match!")
+        }      
         try{ 
-            const user=await createUserWithEmailAndPassword(auth , "habibaahmed19372456@gmail.com" , "1234")
+            const user=await createUserWithEmailAndPassword(auth , email , password)
             console.log("Hehehe Hello!")
         }
         catch(error){
