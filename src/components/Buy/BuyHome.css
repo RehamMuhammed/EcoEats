@@ -9,6 +9,8 @@
     font-weight: 550;
     color: #FDA403;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: none;
+
 }
 .buy-title{
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -19,6 +21,8 @@
     padding-bottom: 12px;
     align-self: center!important;
     -webkit-text-fill-color: #FDA403;
+    text-shadow: none;
+
 }
 .buy-btn{
     align-self: center!important;

@@ -9,6 +9,8 @@
     font-weight: 550;
     color:#056365;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: none;
+
 }
 .header-title{
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -19,6 +21,8 @@
     padding-bottom: 12px;
     align-self: center!important;
     -webkit-text-fill-color: #056365;
+    text-shadow: none;
+
 }
 .header-btn{
     align-self: center!important;
