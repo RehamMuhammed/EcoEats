@@ -14,6 +14,7 @@
 
   nav ul {
     list-style-type: none;
+    display: flex;
     /* margin-top: -55px;
     padding-left: 1095px; */
     margin-bottom: 0px;

@@ -1,6 +1,6 @@
-  import React from 'react';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Link, Route  } from 'react-router-dom'; 
+import { Link, Route } from 'react-router-dom';
 import logo from "../../images/logo.png";
 // import Login  from '../Forms/LoginForm/Login'
 // import SignUp from'../Forms/SignUpForm/SignUp';
@@ -8,35 +8,60 @@ import logo from "../../images/logo.png";
 import '../Navbar/Navbar.css';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import useFirebaseUser from '../../hooks/useFirebaseUser';
+import { signOut } from 'firebase/auth';
+import { auth } from '../../FireBase.config';
 
 
 
-const Navbar = ({toggle , setToggle}) => {
-  const navigate = useNavigate() 
-  const handleToggleChange=() =>{
+
+
+const Navbar = ({ toggle, setToggle }) => {
+  const user = useFirebaseUser();
+  const navigate = useNavigate()
+  const handleToggleChange = () => {
     setToggle(!toggle);
-    toggle ? navigate("/") :  navigate("/buy")
+    toggle ? navigate("/") : navigate("/buy")
+  }
+  const logout = async() => {
+    try{
+      await signOut(auth)
+      navigate("/login") 
+    }
+    catch(error){
+      console.log(",error" ,error);
+    }
   }
   return (
-    <nav style={{backgroundColor : toggle ? "#FDA403" : "#056365"  }}>
+    <nav style={{ backgroundColor: toggle ? "#FDA403" : "#056365" }}>
       <div className="left-child">
-      <div className="App">
-      <Link to="/">
-      <img src={ require('../../images/logo.png')} height={60} width={60} >
-    </img>
-    </Link>
-      </div>
-      <div className="toggle-container" onClick={handleToggleChange}>
-        <div className={`toggle-btn ${!toggle ? "disable" : ""}`}>{toggle ? "Buy" : "Donation"}
-        {/* <Route path="/Buy" element={<BuyHome/>}/> */}
+        <div className="App">
+          <Link to="/">
+            <img src={require('../../images/logo.png')} height={60} width={60} >
+            </img>
+          </Link>
+        </div>
+        <div className="toggle-container" onClick={handleToggleChange}>
+          <div className={`toggle-btn ${!toggle ? "disable" : ""}`}>{toggle ? "Buy" : "Donation"}
+            {/* <Route path="/Buy" element={<BuyHome/>}/> */}
+          </div>
         </div>
       </div>
-      </div>
-      <ul>  
-        <li><Link className="nav-link" to="/login">Login</Link></li>
-        <li><Link className="nav-link" to="/signup">Signup</Link></li>
-        <li><Link className="nav-link" to="/aboutus">About Us</Link></li>
-        <li><Link className="nav-link" to="/contactus">Contact Us</Link></li>
+      <ul>
+        {user ? (
+          <>
+            <li><Link className="nav-link" to="/aboutus">About Us</Link></li>
+            <li><Link className="nav-link" to="/contactus">Contact Us</Link></li>
+            <li className="nav-link" onClick={logout}>Logout</li>
+          </>
+        ) : (
+          <>
+            <li><Link className="nav-link" to="/login">Login</Link></li>
+            <li><Link className="nav-link" to="/signup">Signup</Link></li>
+            <li><Link className="nav-link" to="/aboutus">About Us</Link></li>
+            <li><Link className="nav-link" to="/contactus">Contact Us</Link></li>
+          </>
+        )}
       </ul>
     </nav>
   );
