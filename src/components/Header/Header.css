@@ -1,6 +1,10 @@
 .header{
     min-height: 100vh;
-    background:linear-gradient(rgba(238, 249, 241, 0.9), rgba(77, 91, 84, 0.9)), url("../../images/foodonation.png") center/cover no-repeat;
+    background:linear-gradient(rgba(179, 181, 179, 0.9), rgba(62, 73, 68, 0.9)), url("../../images/foodonation.png") center/cover no-repeat;
+}
+
+.container{
+    backdrop-filter: blur(1px);
 }
 .header-content .text-lead{
     font-size: 18px;
@@ -9,7 +13,7 @@
     font-weight: 550;
     color:#056365;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    text-shadow: none;
+    text-shadow: 1px 1px 1px #908e8e;
 
 }
 .header-title{
@@ -21,7 +25,7 @@
     padding-bottom: 12px;
     align-self: center!important;
     -webkit-text-fill-color: #056365;
-    text-shadow: none;
+    text-shadow: 1px 1px 1px #bcb8b8;
 
 }
 .header-btn{

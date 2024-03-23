@@ -1,7 +1,15 @@
 .buy{
-    min-height: 100vh;
-    background:linear-gradient(rgba(142, 142, 137, 0.546), rgba(92, 92, 91, 0.715)), url("../../images/bakerryy.jpg") center/cover no-repeat;
+    /* backdrop-filter: blur(10px);  */
+    min-height: 90vh;
+    background:linear-gradient(rgba(217, 217, 217, 0.715), rgba(75, 75, 68, 0.715)), url("../../images/bakery.jpg") center/cover no-repeat;
 }
+
+.buy-content{
+    backdrop-filter: blur(5px); /* Adjust blur amount as desired */
+
+}
+
+
 .buy-content .text-lead{
     font-size: 18px;
     padding-left: 540px;
@@ -9,7 +17,8 @@
     font-weight: 550;
     color: #FDA403;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    text-shadow: none;
+    text-shadow: 1px 1px 1px #605e5e;
+
 
 }
 .buy-title{
@@ -21,7 +30,8 @@
     padding-bottom: 12px;
     align-self: center!important;
     -webkit-text-fill-color: #FDA403;
-    text-shadow: none;
+    text-shadow: 1px 1px 1px #605e5e;
+
 
 }
 .buy-btn{
