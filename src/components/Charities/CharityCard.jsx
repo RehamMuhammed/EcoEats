@@ -1,0 +1,23 @@
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import './Charities.css';
+
+function CharityCard( {charity} ) {
+  return (
+    <Card style={{ width: '22rem'}}>
+        <div className='d-flex justify-content-center'>
+      <Card.Img variant="top" src={charity.image} style={{ width: '10rem', height:'10rem'}}/>
+      </div>
+      <Card.Body className='text-center'>  
+      <Card.Text className='text-dark shadow-none'> { charity.CharityName }</Card.Text>
+      <Card.Text className='text-dark shadow-none'> { charity.Location }</Card.Text>
+        <Card.Text className='text-dark shadow-none'> { charity.Type }</Card.Text>
+        <Button className='bg-main'>View Charity</Button>
+      </Card.Body>
+    </Card>
+    
+    
+  );
+}
+
+export default CharityCard;

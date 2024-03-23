@@ -1,0 +1,8 @@
+
+.bg-main{
+    background-color: #056365;
+}
+
+.bg-main:hover{
+    background-color: rgb(150, 149, 149);
+}

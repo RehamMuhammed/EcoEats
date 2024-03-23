@@ -9,6 +9,7 @@ const About = () => {
   return (
     <div>
     <div className="charitydon-container">
+      <Link  to="/charities" className="hrr">
       <div className="textt2">
       <div className="imgg">
       <img src={img} />
@@ -27,6 +28,7 @@ const About = () => {
         </p>
         </div>
       </div>
+      </Link>
     </div>
     
     <div className="someonedon-container">

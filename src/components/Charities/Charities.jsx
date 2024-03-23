@@ -1,22 +1,23 @@
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import { useCallback, useEffect, useState } from 'react';
+import CharityCard from './CharityCard';
 
 function Charities() {
+  const [charities, setCharities] = useState([])
+  const fetchData = useCallback( async() => {
+    const res = await fetch("https://ecoeatsapp.wiremockapi.cloud/charities/get")
+    const {result} = await res.json()
+    console.log(result)
+    setCharities(result)
+  },[]) 
+  useEffect(() => {
+    fetchData(  )
+    },[])
   return (
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="" />
-      <Card.Body>
-        <Card.Title>Charity Name</Card.Title>
-        <Card.Text>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
-          architecto quisquam delectus minima perferendis nulla quia nisi
-          laborum, exercitationem cum quo accusantium.
-        </Card.Text>
-        <Button variant="primary">View Charity</Button>
-      </Card.Body>
-    </Card>
-    
-    
+    <div className='d-flex flex-wrap py-5 gap-5 justify-content-center' >
+      {
+        charities.map(charity => <CharityCard key={charity.Hotline} charity={charity}/> )
+      }
+    </div>
   );
 }
 
