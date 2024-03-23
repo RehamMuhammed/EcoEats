@@ -1,27 +1,38 @@
 import React from 'react'
 import bgImg from '../../images/logo.png';
 import { useForm } from 'react-hook-form';
-import {Link} from 'react-router-dom'; 
+import {Link , useNavigate} from 'react-router-dom'; 
 import './Form.css';
 import {createUserWithEmailAndPassword} from 'firebase/auth';
-import auth from '../../FireBase.config';
+import {auth, db} from '../../FireBase.config';
+import { doc, setDoc } from 'firebase/firestore';
 
 // import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 // const auth = getAuth();
 
 export default function Form() {
-
+    const navigate = useNavigate()
     const { register, handleSubmit, watch, formState: { errors } } = useForm()
     const onSubmit = async(data) => {
-        const {email,password,confirmpwd} = data
+        const {email,password,confirmpwd,username,mobile} = data
         if (password !== confirmpwd ) {
             console.log("Passwords don't match!")
         }      
         try{ 
-            const user=await createUserWithEmailAndPassword(auth , email , password)
+            const {user}=await createUserWithEmailAndPassword(auth , email , password)
+            const ref = doc(db ,"users" , user.uid)
+            const data = {
+                id: user.uid, 
+                email,
+                username,
+                mobile
+            }
+            await setDoc(ref, data);
             console.log("Hehehe Hello!")
+            navigate("/")
         }
+    
         catch(error){
             console.error('Signup error:', error);
         }
