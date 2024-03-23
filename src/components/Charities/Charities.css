@@ -1,8 +1,17 @@
 
+.container3{
+    background: url("../../images/bgreenn.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .bg-main{
     background-color: #056365;
+    border-color: #056365;
 }
 
 .bg-main:hover{
     background-color: rgb(150, 149, 149);
+    border-color: rgb(150, 149, 149);
 }
+

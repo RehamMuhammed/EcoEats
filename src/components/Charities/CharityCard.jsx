@@ -4,7 +4,7 @@ import './Charities.css';
 
 function CharityCard( {charity} ) {
   return (
-    <Card style={{ width: '22rem'}}>
+    <Card style={{ width: '22rem', background: 'transparent', backdropFilter: "blur(20px)"}} className='pt-3'>
         <div className='d-flex justify-content-center'>
       <Card.Img variant="top" src={charity.image} style={{ width: '10rem', height:'10rem'}}/>
       </div>

@@ -13,10 +13,12 @@ function Charities() {
     fetchData(  )
     },[])
   return (
+    <div className='container3'>
     <div className='d-flex flex-wrap py-5 gap-5 justify-content-center' >
       {
         charities.map(charity => <CharityCard key={charity.Hotline} charity={charity}/> )
       }
+    </div>
     </div>
   );
 }
