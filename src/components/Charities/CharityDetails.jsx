@@ -1,7 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import './Details.css';
-// import img2 from "../../images/Eco.png";
+import img2 from "../../images/Eco.png";
 
 
 

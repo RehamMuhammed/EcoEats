@@ -1,10 +1,12 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FaCheckCircle, FaMapMarkerAlt, FaEnvelope } from 'react-icons/fa';
+import styles from "./Aboutus.module.css";
+
 
 function AboutUs() {
   return (
-    <Container>
+    <Container className={styles.aboutusContainer}>
       <h1>About Us</h1>
       <Row>
         <Col md={6}>
@@ -29,9 +31,9 @@ function AboutUs() {
             </li>
           </ul>
         </Col>
-        <Col md={6}>
+        {/* <Col md={6}>
           <img src={'/'} alt="About Us" className="img-fluid" />
-        </Col>
+        </Col> */}
       </Row>
     </Container>
   );
