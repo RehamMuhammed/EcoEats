@@ -2,12 +2,13 @@ import React from 'react';
 import { Form, Button, Row, Col } from 'react-bootstrap';
 
 import {FaEnvelope, FaPhone} from "react-icons/fa";
+import styles from './Contact.module.css';
 
 // import contactImage from './contact-image.jpg';
 
 function ContactUs() {
   return (
-    <div className="container">
+    <div className={styles.containerContact}>
       <h1>Contact Us</h1>
       <Row>
         <Col md={6}>

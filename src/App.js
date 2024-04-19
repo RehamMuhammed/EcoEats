@@ -32,7 +32,7 @@ function App() {
     <div>
       <Router>
         <Navbar toggle={toggle} setToggle={setToggle} />
-        <div style={{ minHeight: "80vh" }}>
+        <div style={{ minHeight: "80vh" ,width:"100%"  }}>
           <Routes>
             <Route path="/donation-form" element={<DonationThoSoYk />} />
             <Route path="/charities" element={<Charities/>} />
@@ -46,7 +46,7 @@ function App() {
           </Routes>
         </div>
 
-<CharityDetails/>
+{/* <CharityDetails/> */}
 
         <Footer toggle={toggle} />
 

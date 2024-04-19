@@ -1,6 +1,8 @@
 .aboutusContainer {
     background-color: #bdb5b4;
     margin: auto;
+    min-height: 80vh;
+    padding-top: 75px;
   }
   
   .aboutusContainer h1{
@@ -8,7 +10,7 @@
     font-weight: normal;
     font-size: 50px;
     /* line-height: 30px; */
-    margin-top: 100px;
+    /* margin-top: 100px; */
   }
 
   .aboutusContainer p{

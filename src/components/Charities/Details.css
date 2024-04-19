@@ -1,0 +1,20 @@
+.details-container{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;  
+}
+
+.charityimg{
+    padding-left: 200px;
+}
+
+.charitydet{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    /* margin-top: 10px; */
+    
+    padding-left: 200px;
+    font-size: 20px;
+    color: black;
+    text-shadow: none;
+}
