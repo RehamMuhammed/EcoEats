@@ -12,7 +12,7 @@ function CharityCard( {charity} ) {
       <Card.Text className='text-dark shadow-none'> { charity.CharityName }</Card.Text>
       <Card.Text className='text-dark shadow-none'> { charity.Location }</Card.Text>
         <Card.Text className='text-dark shadow-none'> { charity.Type }</Card.Text>
-        <Button className='bg-main'>View Charity</Button>
+        <Button href="charitydetails" className='bg-main'>View Charity</Button>
       </Card.Body>
     </Card>
     
@@ -21,3 +21,7 @@ function CharityCard( {charity} ) {
 }
 
 export default CharityCard;
+
+
+
+
