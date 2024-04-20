@@ -26,12 +26,12 @@ function CharityDetails( ) {
     return <div>Loading...</div>;
   }
   return (
-    <div className='details-container'>
+    <div className='details-container d-flex'>
     <div className='charityimg'>
   <Card.Img variant="top" src={charity.image[0]} style={{ width: '23rem', height:'23rem'}}/>
   </div>
   <Card.Body className='charitydet'>  
-  <Card.Text className='text-dark'><h2>{charity.CharityName}</h2> </Card.Text>
+  <Card.Text className='text-dark'><h2 className='charity-name'>{charity.CharityName}</h2> </Card.Text>
   <Card.Text className='text-dark'> Type: {charity.Type}</Card.Text>
   <Card.Text className='text-dark'>Location: {charity.Location}</Card.Text>
   <Card.Text className='text-dark'>Hotline: {charity.Hotline}</Card.Text>

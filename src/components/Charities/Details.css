@@ -5,15 +5,20 @@
 }
 
 .charityimg{
+    display: flex;
     padding-left: 200px;
+}
+
+.charity-name{
+    text-align: center;
 }
 
 .charitydet{
     font-family: Georgia, 'Times New Roman', Times, serif;
-    text-align: center;
+    /* text-align: center; */
     /* margin-top: 10px; */
     
-    padding-left: 200px;
+    padding-left: 500px;
     font-size: 20px;
     color: black;
     text-shadow: none;
