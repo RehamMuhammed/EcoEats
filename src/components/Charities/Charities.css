@@ -6,12 +6,17 @@
 }
 
 .bg-main{
-    background-color: #056365;
-    border-color: #056365;
+    /* background-color: #056365;
+    border-color: #056365; */
+    background-color: #056365 !important;
+    color: #e9ecef !important;
+    cursor: pointer;
 }
 
 .bg-main:hover{
     background-color: rgb(150, 149, 149);
     border-color: rgb(150, 149, 149);
 }
+
+
 

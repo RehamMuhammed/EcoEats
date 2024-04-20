@@ -132,7 +132,7 @@
       }
 
       .form form{
-        backdrop-filter: blur(10px); /* Adjust blur amount as desired */
+        backdrop-filter: blur(10px); 
         width: 50%;
         border: 1px solid #605e5e;
         border-radius: 20px;

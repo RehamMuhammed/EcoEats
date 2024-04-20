@@ -1,12 +1,15 @@
 .details-container{
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     padding: 20px;  
 }
 
 .charityimg{
     display: flex;
-    padding-left: 200px;
+    justify-content: center;
+  align-items: center;
 }
 
 .charity-name{
@@ -18,7 +21,7 @@
     /* text-align: center; */
     /* margin-top: 10px; */
     
-    padding-left: 500px;
+    /* padding-left: 500px; */
     font-size: 20px;
     color: black;
     text-shadow: none;

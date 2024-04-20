@@ -37,7 +37,7 @@ function CharityDetails( ) {
   <Card.Text className='text-dark'>Hotline: {charity.Hotline}</Card.Text>
   <Card.Text className='text-dark'>Description: {charity.Mission}</Card.Text>
   <Card.Text className='text-dark'>Contact: {charity.ContactInformation}</Card.Text>
-    
+    <br></br>
   </Card.Body>
 </div>
     
