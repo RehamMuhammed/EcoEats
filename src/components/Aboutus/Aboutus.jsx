@@ -7,16 +7,21 @@ import styles from "./Aboutus.module.css";
 function AboutUs() {
   return (
     <Container className={styles.aboutusContainer}>
-      <h1>About Us</h1>
+      <br></br>
+      <h1 style={{color:'#1254'}}>About Us</h1>
+      <br>
+      </br>
       <Row>
         <Col md={6}>
-          <p>
+          <p style={{color:'#1254'}}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
             vestibulum, sem at accumsan eleifend, nisi arcu dictum metus, eu
             sagittis metus diam nec lectus. Donec ut nunc euismod, dignissim
             felis quis, sagittis odio.
           </p>
-          <ul>
+          <br></br>
+          <br></br>
+          <ul style={{color:'lightgrey'}}>
             <li>
               <FaCheckCircle className="mr-2" />
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
