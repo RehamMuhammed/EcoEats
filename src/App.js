@@ -41,12 +41,13 @@ function App() {
             <Route path="/buy" element={<BuyHome />} />
             <Route path="/contactus" element={<Contact/>} />
             <Route path="/aboutus" element={<Aboutus/>} />
+            <Route path="/charities/:id" element={<CharityDetails/>} />
+
             <Route path="/" element={<Home />} />
   
           </Routes>
         </div>
 
-{/* <CharityDetails/> */}
 
         <Footer toggle={toggle} />
 

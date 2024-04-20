@@ -33,7 +33,7 @@ function Charities() {
 
       <div className='d-flex flex-wrap py-5 gap-5 justify-content-center' >
         {
-          (searchValue === "" ? charities : filter).map(charity => <CharityCard key={charity.Hotline} charity={charity} />)
+          (searchValue === "" ? charities : filter).map(charity => <CharityCard key={charity.id} charity={charity} />)
         } 
       </div>
     </div>

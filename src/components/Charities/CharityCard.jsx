@@ -1,6 +1,8 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import './Charities.css';
+import { Link } from 'react-router-dom';
+
 
 function CharityCard( {charity} ) {
   return (
@@ -12,7 +14,10 @@ function CharityCard( {charity} ) {
       <Card.Text className='text-dark shadow-none'> { charity.CharityName }</Card.Text>
       <Card.Text className='text-dark shadow-none'> { charity.Location }</Card.Text>
         <Card.Text className='text-dark shadow-none'> { charity.Type }</Card.Text>
-        <Button href="charitydetails" className='bg-main'>View Charity</Button>
+       <Link to={`/charities/${charity.id}`} className='bg-main'>       <Button>
+View Charity        </Button> 
+</Link>
+       
       </Card.Body>
     </Card>
     
