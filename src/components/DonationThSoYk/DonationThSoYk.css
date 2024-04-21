@@ -28,7 +28,7 @@
   }
   input[type=textt], input[type=number] 
   {
-  width: 57%;
+  width: 75%;
   padding: 10px;
   margin: 5px 0 22px 0;
   display: inline-block;
@@ -133,7 +133,7 @@
 
       .form form{
         backdrop-filter: blur(10px); 
-        width: 50%;
+        width: 40%;
         border: 1px solid #605e5e;
         border-radius: 20px;
         padding: 30px;
