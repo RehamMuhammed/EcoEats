@@ -10,9 +10,8 @@ import BuyHome from './components/Buy/BuyHome';
 import Home from './components/Home/Home';
 import Footer from './components/Footer/Footer';
 import Contact from './components/Contact/Contact';
-import Aboutus from './components/Aboutus/Aboutus';
+import Aboutus from   './components/Aboutus/Aboutus';
 import { useState } from 'react';
-
 import CharityDetails from './components/Charities/CharityDetails';
 
 
