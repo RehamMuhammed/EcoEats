@@ -12,9 +12,9 @@ import Footer from './components/Footer/Footer';
 import Contact from './components/Contact/Contact';
 import Aboutus from './components/Aboutus/Aboutus';
 import { useState } from 'react';
-
+import CharityList from './components/Charities/CharityList'
 import CharityDetails from './components/Charities/CharityDetails';
-
+import Stores from './components/Store/Stores'
 
 
 
@@ -42,6 +42,9 @@ function App() {
             <Route path="/contactus" element={<Contact/>} />
             <Route path="/aboutus" element={<Aboutus/>} />
             <Route path="/charities/:id" element={<CharityDetails/>} />
+            <Route path="/donation" element={<CharityList/>} />
+            <Route path="/stores" element={<Stores/>} />
+
 
             <Route path="/" element={<Home />} />
   
