@@ -1,52 +1,42 @@
 import React from 'react';
 import { Form, Button, Row, Col } from 'react-bootstrap';
 
-import {FaEnvelope, FaPhone} from "react-icons/fa";
+import { FaEnvelope, FaPhone } from "react-icons/fa";
 import styles from './Contact.module.css';
 
 // import contactImage from './contact-image.jpg';
 
 function ContactUs() {
   return (
+    <div className={styles.container4}>
+	 	<div className="form">
     <div className={styles.containerContact}>
       <h1>Contact Us</h1>
-      <Row>
-        <Col md={6}>
-          <Form>
-            <Form.Group controlId="formName">
-              <Form.Label>Name:</Form.Label>
-              <Form.Control type="text" placeholder="Enter your name" />
-            </Form.Group>
+      <hr></hr>
+      <br></br>
+      <div>
+        <label htmlFor="name">Name:</label>
+        <br></br>
+        <input type="texttt" id="name" placeholder="Enter your name" />
+        <br></br>
+        <label htmlFor="email">Email:</label>
+        <br></br>
+        <input type="texttt" id="email" placeholder="Enter your email" />
+        <br></br>
+        <label htmlFor="message">Message:</label>
+        <br></br>
+        <input type="textt" className="placeholder-text" placeholder="Enter your message." name="number" required style={{ width: '450px', height: '150px'}} ></input>
+        <br></br>
+        <div className={styles.contbutton}>
+        <button type="submit" className='contactbtn button' >Submit</button>
+        </div>
+      </div>
 
-            <Form.Group controlId="formEmail">
-              <Form.Label>Email:</Form.Label>
-              <Form.Control type="email" placeholder="Enter your email" />
-            </Form.Group>
-
-            <Form.Group controlId="formMessage">
-              <Form.Label>Message:</Form.Label>
-              <Form.Control as="textarea" rows={3} placeholder="Enter your message" />
-            </Form.Group>
-
-            <Button variant="primary" type="submit">
-              Submit
-            </Button>
-          </Form>
-        </Col>
-        <Col md={6}>
-          <div className="contact-info">
-            <h3>Contact Information</h3>
-            <p>
-              <FaEnvelope /> info@example.com
-            </p>
-            <p>
-              <FaPhone  /> +1 123-456-7890
-            </p>
-            <img src={''} alt="Contact Us" className="contact-image" />
-          </div>
-        </Col>
-      </Row>
     </div>
+    </div>
+    </div>
+    
+    
   );
 }
 
