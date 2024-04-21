@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card';
 import './Details.css';
 import img2 from "../../images/bgreen.jpg";
 import { useState,useEffect } from 'react';
-import {useParams } from 'react-router-dom';
+import {useParams ,Link} from 'react-router-dom';
 
 
 
@@ -38,6 +38,11 @@ function CharityDetails( ) {
   <Card.Text className='text-dark'>Description: {charity.Mission}</Card.Text>
   <Card.Text className='text-dark'>Contact: {charity.ContactInformation}</Card.Text>
     <br></br>
+    <Link to={`/charities`}> <Button className='btn-donate'>Back</Button></Link>
+    <Link to={`/donation`}> <Button className='btn-donate'>Donate</Button></Link>
+    
+
+
   </Card.Body>
 </div>
     

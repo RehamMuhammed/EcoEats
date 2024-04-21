@@ -30,3 +30,20 @@
     color: black;
     text-shadow: none;
 }
+
+.btn-donate{
+    justify-content: center;
+    align-items: center;
+    background-color: #056365;
+    text-align: center;
+    color: #e9ecef;
+    font-size: 1em;
+    cursor: pointer;
+    
+  }
+
+  .btn-donate:hover{
+    background-color: #056365;
+    color: black;  
+  }
+

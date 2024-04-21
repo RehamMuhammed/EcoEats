@@ -5,13 +5,27 @@
     background-size: cover;
 }
 
-.bg-main{
+.btn-view{
     /* background-color: #056365;
     border-color: #056365; */
-    background-color: #056365 !important;
+    /* background-color: #056365 !important;
     color: #e9ecef !important;
+    cursor: pointer; */
+    justify-content: center;
+    align-items: center;
+    background-color: #056365;
+    text-align: center;
+    color: #e9ecef;
+    font-size: 1em;
     cursor: pointer;
+    
 }
+
+
+.btn-view:hover{
+    background-color: #056365;
+    color: black;  
+  }
 
 .bg-main:hover{
     background-color: rgb(150, 149, 149);
