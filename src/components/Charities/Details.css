@@ -1,49 +1,52 @@
-.details-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;  
-}
-
-/* .charityimg{
-<<<<<<< HEAD
-    padding-left: 200px;
-=======
-    display: flex;
-    justify-content: center;
+.details-container {
+  display: flex !important;
+  justify-content: center;
   align-items: center;
->>>>>>> 28a1083a316038bd4c1470c8935f5ee07ecc5eef
-} */
+  padding: 20px;
+  gap: 90px;
+  width: 80%;
+  margin: 3rem auto 0rem;
 
-.charity-name{
-    text-align: center;
+
 }
 
-.charitydet{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    /* text-align: center; */
-    /* margin-top: 10px; */
-    
-    /* padding-left: 500px; */
-    font-size: 20px;
-    color: black;
-    text-shadow: none;
+
+
+.charity-name {
+  text-align: center;
 }
 
-.btn-donate{
-    justify-content: center;
-    align-items: center;
-    background-color: #056365;
-    text-align: center;
-    color: #e9ecef;
-    font-size: 1em;
-    cursor: pointer;
-    
-  }
+.charitydet {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  /* text-align: center; */
+  /* margin-top: 10px; */
 
-  .btn-donate:hover{
-    background-color: #056365;
-    color: black;  
-  }
+  /* padding-left: 500px; */
+  font-size: 20px;
+  color: black;
+  text-shadow: none;
+}
 
+.btn-donate {
+  justify-content: center;
+  align-items: center;
+  background-color: #056365;
+  text-align: center;
+  color: #e9ecef;
+  font-size: 1em;
+  cursor: pointer;
+  padding: 1rem 3rem;
+
+
+}
+
+.btn-donate:hover {
+  background-color: #056365;
+  color: black;
+}
+
+.button-gp {
+  padding-top: 10px;
+  display: flex;
+  gap: 30px;
+}

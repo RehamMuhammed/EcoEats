@@ -12,10 +12,8 @@ import Footer from './components/Footer/Footer';
 import Contact from './components/Contact/Contact';
 import Aboutus from   './components/Aboutus/Aboutus';
 import { useState } from 'react';
-<<<<<<< HEAD
+
 import CharityList from './components/Charities/CharityList'
-=======
->>>>>>> 14cdd5235de76338585538c4e747c52af00a92d6
 import CharityDetails from './components/Charities/CharityDetails';
 import Stores from './components/Store/Stores'
 
@@ -35,7 +33,7 @@ function App() {
     <div>
       <Router>
         <Navbar toggle={toggle} setToggle={setToggle} />
-        <div style={{ minHeight: "80vh" ,width:"100%"  }}>
+        <div style={{ minHeight: "80vh"}}>
           <Routes>
             <Route path="/donation-form" element={<DonationThoSoYk />} />
             <Route path="/charities" element={<Charities/>} />
@@ -46,7 +44,7 @@ function App() {
             <Route path="/aboutus" element={<Aboutus/>} />
             <Route path="/charities/:id" element={<CharityDetails/>} />
             <Route path="/donation" element={<CharityList/>} />
-            <Route path="/stores" element={<Stores/>} />
+            <Route path="/store" element={<Stores/>} />
 
 
             <Route path="/" element={<Home />} />

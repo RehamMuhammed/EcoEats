@@ -46,7 +46,7 @@ input[type=texttt]
   color: white;
   padding: 15px 15px;
   margin: 10px 0px;
-  border: none;
+  border: 30px;
   cursor: pointer;
   width: 320px;
   }
