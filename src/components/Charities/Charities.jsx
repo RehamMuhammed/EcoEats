@@ -6,10 +6,10 @@ function Charities() {
   const [filter, setFilter] = useState([])
   const [searchValue, setSearchValue] = useState("")
   const fetchData = useCallback(async () => {
-    const res = await fetch("https://ecoeatsapp.wiremockapi.cloud/charities/get")
-    const { result } = await res.json()
-    console.log(result)
-    setCharities(result)
+    const res = await fetch("http://localhost:8000/api/getCharity")
+    const { data } = await res.json()
+    console.log(data)
+    setCharities(data)
   }, [])
   useEffect(() => {
     fetchData()
@@ -24,7 +24,7 @@ function Charities() {
       return (charity.CharityName.includes(searchValue))
     })
     console.log(filterCharities)
-    setFilter(filterCharities) 
+    setFilter(filterCharities)
   }, [searchValue])
 
   return (
@@ -34,7 +34,7 @@ function Charities() {
       <div className='d-flex flex-wrap py-5 gap-5 justify-content-center' >
         {
           (searchValue === "" ? charities : filter).map(charity => <CharityCard key={charity.id} charity={charity} />)
-        } 
+        }
       </div>
     </div>
   );
