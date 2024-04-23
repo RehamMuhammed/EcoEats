@@ -10,9 +10,12 @@ import BuyHome from './components/Buy/BuyHome';
 import Home from './components/Home/Home';
 import Footer from './components/Footer/Footer';
 import Contact from './components/Contact/Contact';
-import Aboutus from './components/Aboutus/Aboutus';
+import Aboutus from   './components/Aboutus/Aboutus';
 import { useState } from 'react';
+<<<<<<< HEAD
 import CharityList from './components/Charities/CharityList'
+=======
+>>>>>>> 14cdd5235de76338585538c4e747c52af00a92d6
 import CharityDetails from './components/Charities/CharityDetails';
 import Stores from './components/Store/Stores'
 

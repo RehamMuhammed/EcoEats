@@ -6,6 +6,7 @@ import styles from "./Aboutus.module.css";
 
 function AboutUs() {
   return (
+    <div className='aboutus-container'style={{ backgroundImage: `url(${require('../../images/bgroundd.jpg')})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
     <Container className={styles.aboutusContainer}>
       <br></br>
       <h1 style={{color:'#1254'}}>About Us</h1>
@@ -13,7 +14,7 @@ function AboutUs() {
       </br>
       <Row>
         <Col md={6}>
-          <p style={{color:'#1254'}}>
+          <p  style={{color:'#1254'}} className="pname">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
             vestibulum, sem at accumsan eleifend, nisi arcu dictum metus, eu
             sagittis metus diam nec lectus. Donec ut nunc euismod, dignissim
@@ -41,6 +42,7 @@ function AboutUs() {
         </Col> */}
       </Row>
     </Container>
+    </div>
   );
 }
 
