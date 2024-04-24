@@ -1,5 +1,35 @@
-.stores-container{
-background-color: blanchedalmond;
-height: 80vh;
-width: 100%;
+
+/* .store-container{
+    background: url("../../images/bakerryy.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+.store-btn{
+    justify-content: center;
+    align-items: center;
+    background-color: #FDA143 ;
+    text-align: center;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 30px;
+    border-style: none;
+    padding: 1rem 3rem ;
+    height: 55px;
 }
+
+
+.store-btn:hover{
+    
+    background-color: #757572;
+    color: black;  
+  }
+
+.bg-main:hover{
+    background-color: rgb(150, 149, 149);
+    border-color: black;
+}
+
+
+
+ 

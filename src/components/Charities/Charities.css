@@ -6,19 +6,16 @@
 }
 
 .btn-view{
-    /* background-color: #056365;
-    border-color: #056365; */
-    /* background-color: #056365 !important;
-    color: #e9ecef !important;
-    cursor: pointer; */
     justify-content: center;
     align-items: center;
     background-color: #056365;
     text-align: center;
     color: #e9ecef;
     font-size: 1em;
-    cursor: pointer;
-    
+    cursor: pointer;    
+    border-radius: 30px;
+    border-style: none;
+    padding: 1rem 3rem;
 }
 
 

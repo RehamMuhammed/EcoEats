@@ -25,6 +25,7 @@ import Toaster from 'react-hot-toast';
 
 import app from './FireBase.config';
 import Charities from './components/Charities/Charities';
+import StoreDetails from './components/Store/StoreDetails';
 
 function App() {
   const [toggle, setToggle] = useState(false);
@@ -32,7 +33,7 @@ function App() {
   return (
     <div>
       <Router>
-        <Navbar toggle={toggle} setToggle={setToggle} />
+        <Navbar toggle={toggle} setToggle={setToggle}/>
         <div style={{ minHeight: "80vh"}}>
           <Routes>
             <Route path="/donation-form" element={<DonationThoSoYk />} />
@@ -45,6 +46,7 @@ function App() {
             <Route path="/charities/:id" element={<CharityDetails/>} />
             <Route path="/donation" element={<CharityList/>} />
             <Route path="/store" element={<Stores/>} />
+            <Route path="/store/:id" element={<StoreDetails/>} />
 
 
             <Route path="/" element={<Home />} />

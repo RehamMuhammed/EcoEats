@@ -1,0 +1,76 @@
+.details-container {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  padding-top: 70px;
+  gap: 90px;
+  width: 80%;
+  margin: 3rem auto 0rem;
+
+
+}
+
+
+
+.charity-name {
+  text-align: center;
+}
+
+.charitydet {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  /* text-align: center; */
+  /* margin-top: 10px; */
+
+  /* padding-left: 500px; */
+  font-size: 20px;
+  color: black;
+  text-shadow: none;
+}
+
+.btn-buyy {
+  justify-content: center;
+  align-items: center;
+  background-color: #FDA143;
+  text-align: center;
+  color: #e9ecef;
+  font-size: 1em;
+  cursor: pointer;
+  padding: 1rem 3rem;
+  width: 190px;
+
+
+
+}
+
+
+.btn-store{
+  justify-content: center;
+  align-items: center;
+  background-color: #FDA143;
+  text-align: center;
+  color: #e9ecef;
+  font-size: 1em;
+  cursor: pointer;
+  padding: 1rem 3rem;
+  border-radius: 10px;
+  width: 150px;
+
+}
+
+
+.btn-store:hover {
+  background-color: lightslategray;
+  color: black;
+}
+
+.btn-buyy:hover {
+  background-color: lightslategray;
+  color: black;
+}
+
+.button-gp {
+  padding-top: 10px;
+  display: flex;
+  gap: 30px;
+}

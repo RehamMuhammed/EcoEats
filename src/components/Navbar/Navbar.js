@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useMemo } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link, Route } from 'react-router-dom';
 import logo from "../../images/logo.png";
@@ -11,6 +11,7 @@ import { useState } from 'react';
 import useFirebaseUser from '../../hooks/useFirebaseUser';
 import { signOut } from 'firebase/auth';
 import { auth } from '../../FireBase.config';
+import { OrangePaths } from '../../constants/paths';
 
 
 
@@ -18,7 +19,9 @@ import { auth } from '../../FireBase.config';
 
 const Navbar = ({ toggle, setToggle }) => {
   const user = useFirebaseUser();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const pathname = window.location.pathname;
+  console.log(pathname)
   const handleToggleChange = () => {
     setToggle(!toggle);
     toggle ? navigate("/") : navigate("/buy")
@@ -32,11 +35,18 @@ const Navbar = ({ toggle, setToggle }) => {
       console.log(",error" ,error);
     }
   }
+
+  useEffect(() => {
+    for(let key of OrangePaths) {
+      if ( pathname.includes(key) ) setToggle(true)
+    }
+  }, [pathname]);
+
   return (
-    <nav style={{ backgroundColor: toggle ? "#FDA403" : "#056365" }}>
+    <nav style={{ backgroundColor: toggle ? "#FDA143" : "#056365" }}>
       <div className="left-child">
         <div className="App">
-          <Link to="/">
+          <Link to={toggle ? '/buy' : '/'}>
             <img src={require('../../images/logo.png')} height={60} width={60} >
             </img>
           </Link>

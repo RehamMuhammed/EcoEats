@@ -4,7 +4,7 @@ import "./Footer.css";
 
 const Footer = ({toggle}) => {
     return (
-<div class="footer-distributed" style={{backgroundColor : toggle ? "#FDA403" : "#056365"  }} >
+<div class="footer-distributed" style={{backgroundColor : toggle ? "#FDA143" : "#056365"  }} >
 
 	<div class="footer-left">
     <br></br>
