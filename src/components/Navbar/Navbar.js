@@ -26,13 +26,13 @@ const Navbar = ({ toggle, setToggle }) => {
     setToggle(!toggle);
     toggle ? navigate("/") : navigate("/buy")
   }
-  const logout = async() => {
-    try{
+  const logout = async () => {
+    try {
       await signOut(auth)
-      navigate("/login") 
+      navigate("/login")
     }
-    catch(error){
-      console.log(",error" ,error);
+    catch (error) {
+      console.log(",error", error);
     }
   }
 
@@ -42,6 +42,7 @@ const Navbar = ({ toggle, setToggle }) => {
     }
   }, [pathname]);
 
+  console.log(user)
   return (
     <nav style={{ backgroundColor: toggle ? "#FDA143" : "#056365" }}>
       <div className="left-child">
@@ -62,6 +63,7 @@ const Navbar = ({ toggle, setToggle }) => {
           <>
             <li><Link className="nav-link" to="/aboutus">About Us</Link></li>
             <li><Link className="nav-link" to="/contactus">Contact Us</Link></li>
+            <li><Link className="nav-link" to={`/profile/${user.uid}`}>Profile</Link></li>
             <li className="nav-link" onClick={logout}>Logout</li>
           </>
         ) : (

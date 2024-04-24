@@ -10,12 +10,13 @@ import BuyHome from './components/Buy/BuyHome';
 import Home from './components/Home/Home';
 import Footer from './components/Footer/Footer';
 import Contact from './components/Contact/Contact';
-import Aboutus from   './components/Aboutus/Aboutus';
+import Aboutus from './components/Aboutus/Aboutus';
 import { useState } from 'react';
 
 import CharityList from './components/Charities/CharityList'
 import CharityDetails from './components/Charities/CharityDetails';
 import Stores from './components/Store/Stores'
+import Profile from './components/Profile/Profile';
 
 
 
@@ -37,7 +38,7 @@ function App() {
         <div style={{ minHeight: "80vh"}}>
           <Routes>
             <Route path="/donation-form" element={<DonationThoSoYk />} />
-            <Route path="/charities" element={<Charities/>} />
+            <Route path="/charities" element={<Charities />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
             <Route path="/buy" element={<BuyHome />} />
@@ -47,10 +48,11 @@ function App() {
             <Route path="/donation" element={<CharityList/>} />
             <Route path="/store" element={<Stores/>} />
             <Route path="/store/:id" element={<StoreDetails/>} />
+            <Route path='/profile/:id' element={<Profile />} />
 
 
             <Route path="/" element={<Home />} />
-  
+
           </Routes>
         </div>
 
@@ -58,7 +60,7 @@ function App() {
         <Footer toggle={toggle} />
 
       </Router>
-      
+
     </div>
 
   );
