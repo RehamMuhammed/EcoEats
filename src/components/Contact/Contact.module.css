@@ -1,62 +1,56 @@
-.container4{
+.container4 {
   background-image: url("../../images/bakerryy.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .containerContact {
-    margin: auto;
-    min-height: 80vh;
-    padding-top: 100px;
-    border-radius: 12px;
-    padding-bottom: 80px;
-    backdrop-filter: blur(10px); 
-    border: 1px solid #605e5e;
-    padding: 30px;
-    margin: 20px 0px;   
-}
-.containerContact h1 {
-  padding-top: 20px;
-    text-align: center;
-    font-weight: normal;
-    font-size: 50px;
+  margin: auto;
+  min-height: 80vh;
+  padding-top: 100px;
+  border-radius: 12px;
+  padding-bottom: 80px;
+  backdrop-filter: blur(10px);
+  /* border: 1px solid #605e5e; */
+  padding: 30px;
+  margin: 20px 0px;
 }
 
-input[type=texttt]
-  {
+.containerContact h1 {
+  padding-top: 20px;
+  text-align: center;
+  font-weight: normal;
+  font-size: 50px;
+}
+
+input[type=texttt] {
   width: 100%;
   padding: 10px;
   margin: 5px 0 22px 0;
   display: inline-block;
   border: none;
   background: #F5F5F5;
-  }
+}
 
-  .textarea-message{
+.textarea-message {
   /* width: 20%; */
   padding: 10px;
   margin: 5px 0 22px 0;
   display: inline-block;
   border: none;
   background: #F5F5F5;
-  }
+}
 
-  .containerContact button
-  {
-  background-color: grey       ;
+.containerContact button {
+  background-color: grey;
   color: white;
   padding: 15px 15px;
   margin: 10px 0px;
   border: 30px;
   cursor: pointer;
   width: 320px;
-  }
+}
 
-  .contbutton{
-    text-align: center;
-  }
-  
-  
-
-  
-
-    
+.contbutton {
+  text-align: center;
+}
