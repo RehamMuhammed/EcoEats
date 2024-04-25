@@ -23,6 +23,9 @@ function ContactUs() {
         <br></br>
         <input type="texttt" id="email" placeholder="Enter your email" />
         <br></br>
+        <label htmlFor="phone">Phone Number:</label>
+        <br></br>
+        <input type="texttt" id="phone" placeholder="Enter your phone number" />
         <label htmlFor="message">Message:</label>
         <br></br>
         <input type="textt" className="placeholder-text" placeholder="Enter your message." name="number" required style={{ width: '450px', height: '150px'}} ></input>
