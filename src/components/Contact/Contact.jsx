@@ -15,10 +15,8 @@ const ContactUs = () => {
     name: "",
     address: "",
     phone_number: "",
-    family_number: "",
-    food_description: "",
-    food_quantity: "",
-    comment: ""
+    message: ""
+
   })
 
   const updateValues = (name, change) => {
@@ -33,10 +31,11 @@ const ContactUs = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      const collectionRef = collection(db, "donations")
+      const collectionRef = collection(db, "messages")
       await addDoc(collectionRef, formValues)
-      console.log("Hehehe, thank you for your donation!")
+      console.log("Hehehe, thank you for your message!")
       navigate("/")
+
     }
     catch (e) {
       console.log(e)
@@ -44,8 +43,8 @@ const ContactUs = () => {
   }
   return (
     <div className={styles.container4}>
-      <div className="form">
-        <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
+        <div className="form">
           <div className={styles.containerContact}>
             <h1>Contact Us</h1>
             <hr></hr>
@@ -53,18 +52,18 @@ const ContactUs = () => {
             <div>
               <label htmlFor="name">Name:</label>
               <br></br>
-              <input type="texttt" id="name" placeholder="Enter your name" />
+              <input type="texttt" id="name" placeholder="Enter your name" name="name" required onChange={(e) => updateValues("name", e.target.value)} />
               <br></br>
               <label htmlFor="email">Email:</label>
               <br></br>
-              <input type="texttt" id="email" placeholder="Enter your email" />
+              <input type="texttt" id="email" placeholder="Enter your email" name="email" required onChange={(e) => updateValues("email", e.target.value)} />
               <br></br>
               <label htmlFor="phone">Phone Number:</label>
               <br></br>
-              <input type="texttt" id="phone" placeholder="Enter your phone number" />
+              <input type="texttt" id="phone" placeholder="Enter your phone number" name="number" required onChange={(e) => updateValues("phone_number", e.target.value)} />
               <label htmlFor="message">Message:</label>
               <br></br>
-              <input type="textt" className="placeholder-text" placeholder="Enter your message." name="number" required style={{ width: '450px', height: '150px' }} ></input>
+              <input type="textt" className="placeholder-text" placeholder="Enter your message." name="message" required style={{ width: '450px', height: '150px' }} onChange={(e) => updateValues("message", e.target.value)}></input>
               <br></br>
               <div className={styles.contbutton}>
                 <button type="submit" className='contactbtn button' >Submit</button>
@@ -72,8 +71,8 @@ const ContactUs = () => {
             </div>
 
           </div>
-        </form>
-      </div>
+        </div>
+      </form>
     </div>
 
 
