@@ -18,7 +18,7 @@ function Profile() {
             await setDoc(docRef, data);
             toast.success("HEHEHEHEHEH")
             // alert("Updated Successfully")
-        } catch(e) {
+        } catch (e) {
             console.log("error: ", e)
         } finally {
             setIsLoading(false);
@@ -33,7 +33,7 @@ function Profile() {
         }));
         const selectedUser = data.find(user => user.id === userId);
         setUserData(selectedUser);
-        for(let key in selectedUser) {
+        for (let key in selectedUser) {
             setValue(key, selectedUser[key]);
         }
     }
@@ -43,7 +43,7 @@ function Profile() {
     }, [])
 
     return (
-        <div style={{backgroundImage: `url(${require('../../images/white2.jpg')})`, backgroundSize: 'cover', backgroundPosition: 'center', height: '100vh'}}>
+        <div style={{ backgroundImage: `url(${require('../../images/white2.jpg')})`, backgroundSize: 'cover', backgroundPosition: 'center', height: '100vh' }}>
             <section>
                 <div className="row justify-content-center">
                     <div className="col-8 w-full">
@@ -53,10 +53,16 @@ function Profile() {
                         <h2 className='text-center mt-5'>Profile</h2>
                         <form id='form' className='flex flex-col align-items-stretch' onSubmit={handleSubmit(onSubmit)}>
                             <input type="text" {...register("username")} placeholder='Username' />
-                            <input type="text" {...register("email")} placeholder='Email' />
-                            <input type="text" {...register("mobile", { required: true, maxLength: 11 })} placeholder='Mobile Number' />
-                            {errors.mobile?.type === "required" && "Mobile Number is required"}
-                            {errors.mobile?.type === "maxLength" && "Max Length Exceed"}
+                            <input type="text" {...register("email", { pattern: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/ })} placeholder='Email' />
+                            <span className='text-danger'>
+                                {errors.email?.type === "pattern" && "Invalid Email"}
+                            </span>
+                            <input type="text" {...register("mobile", { required: true, maxLength: 11, pattern: /^01[0125][0-9]{8}$/ })} placeholder='Mobile Number' />
+                            <span className='text-danger'>
+                                {errors.mobile?.type === "required" && "Mobile Number is required"}
+                                {errors.mobile?.type === "maxLength" && "Max Length Exceed"}
+                                {errors.mobile?.type === "pattern" && "Invalid Phone Number"}
+                            </span>
                             <input type="text" {...register("city")} placeholder='City' />
                             <input type="text" {...register("country")} placeholder='Country' />
                             <div className='d-flex text-dark gap-4'>
