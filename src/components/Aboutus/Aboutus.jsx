@@ -6,9 +6,8 @@ import styles from "./Aboutus.module.css";
 
 function AboutUs() {
   return (
-    <div className='aboutus-container'style={{ backgroundImage: `url(${require('../../images/bgroundd.jpg')})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
+    <div className='aboutus-container'style={{ backgroundImage: `url(${require('../../images/white3.jpg')})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
     <Container className={styles.aboutusContainer}>
-      <br></br>
       <h1 style={{color:'#1254'}}>About Us</h1>
       <br>
       </br>
@@ -22,7 +21,7 @@ function AboutUs() {
           </p>
           <br></br>
           <br></br>
-          <ul style={{color:'lightgrey'}}>
+          <ul>
             <li>
               <FaCheckCircle className="mr-2" />
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.

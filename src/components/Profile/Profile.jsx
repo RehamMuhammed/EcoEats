@@ -3,14 +3,26 @@ import './Profile.css'
 import { Link, useParams } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { db } from '../../FireBase.config';
-import { collection, getDocs } from 'firebase/firestore';
+import { collection, doc, getDocs, setDoc } from 'firebase/firestore';
+import toast from 'react-hot-toast';
 
 function Profile() {
     const { id: userId } = useParams()
-    const [userData, setUserData] = useState({})
-    const { register, handleSubmit, watch, formState: { errors } } = useForm()
+    const [userData, setUserData] = useState({});
+    const [isLoading, setIsLoading] = useState(false);
+    const { register, handleSubmit, watch, formState: { errors }, setValue } = useForm()
     const onSubmit = async (data) => {
-
+        setIsLoading(true);
+        const docRef = doc(db, 'users', userId);
+        try {
+            await setDoc(docRef, data);
+            toast.success("HEHEHEHEHEH")
+            // alert("Updated Successfully")
+        } catch(e) {
+            console.log("error: ", e)
+        } finally {
+            setIsLoading(false);
+        }
     };
     const getUsers = useCallback(async () => {
         const collectionRef = collection(db, "users");
@@ -19,31 +31,29 @@ function Profile() {
             id: doc.id,
             ...doc.data(),
         }));
-
-        console.log(data.find(user => user.id === userId))
-        return data;
-
-
+        const selectedUser = data.find(user => user.id === userId);
+        setUserData(selectedUser);
+        for(let key in selectedUser) {
+            setValue(key, selectedUser[key]);
+        }
     }
     )
     useEffect(() => {
         getUsers()
-    }, [
-        getUsers
-    ])
+    }, [])
 
     return (
-        <div>
+        <div style={{backgroundImage: `url(${require('../../images/white2.jpg')})`, backgroundSize: 'cover', backgroundPosition: 'center', height: '100vh'}}>
             <section>
-                <div className="register">
-                    {/* <DynamicForm /> */}
-                    <div className="col-3">
-                        <h5>Sign Up</h5>
-                        <form id='form' className='flex flex-col' onSubmit={handleSubmit(onSubmit)}>
+                <div className="row justify-content-center">
+                    <div className="col-8 w-full">
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <h2 className='text-center mt-5'>Profile</h2>
+                        <form id='form' className='flex flex-col align-items-stretch' onSubmit={handleSubmit(onSubmit)}>
                             <input type="text" {...register("username")} placeholder='Username' />
                             <input type="text" {...register("email")} placeholder='Email' />
-                            <input type="password" {...register("password")} placeholder='Password' />
-                            <input type="password" {...register("confirmpwd")} placeholder='Confirm Password' />
                             <input type="text" {...register("mobile", { required: true, maxLength: 11 })} placeholder='Mobile Number' />
                             {errors.mobile?.type === "required" && "Mobile Number is required"}
                             {errors.mobile?.type === "maxLength" && "Max Length Exceed"}
@@ -59,8 +69,7 @@ function Profile() {
                                     <input type="radio" value={"Male"} name='gender' {...register("gender")} />
                                 </div>
                             </div>
-                            <button className='btn'>Sign Up</button>
-                            <Link to='/Login'>Already have an account</Link>
+                            <button className='btn button' disabled={isLoading}>{isLoading ? 'Loading...' : 'Update Profile'}</button>
 
                         </form>
 

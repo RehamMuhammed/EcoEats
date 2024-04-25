@@ -1,10 +1,11 @@
 .buy {
     /* backdrop-filter: blur(10px);  */
-    min-height: 80vh;
+    min-height: 100vh;
     background: linear-gradient(rgba(217, 217, 217, 0.715), rgba(75, 75, 68, 0.715)), url("../../images/bakery.jpg") center/cover no-repeat;
 }
 
 .buy-content {
+    height: 100vh;
     backdrop-filter: blur(5px);
     /* Adjust blur amount as desired */
 
