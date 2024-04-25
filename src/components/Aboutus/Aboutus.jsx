@@ -39,8 +39,8 @@ function AboutUs() {
         {/* <Col md={6}>
           <img src={'/'} alt="About Us" className="img-fluid" />
         </Col> */}
-      </Row>
-    </Container>
+        </Row>
+      </Container>
     </div>
   );
 }
