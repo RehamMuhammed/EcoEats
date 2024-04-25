@@ -44,8 +44,8 @@ const ContactUs = () => {
   }
   return (
     <div className={styles.container4}>
-      <div className="form">
-        <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
+        <div className="form">
           <div className={styles.containerContact}>
             <h1>Contact Us</h1>
             <hr></hr>
@@ -72,8 +72,8 @@ const ContactUs = () => {
             </div>
 
           </div>
-        </form>
-      </div>
+        </div>
+      </form>
     </div>
 
 
