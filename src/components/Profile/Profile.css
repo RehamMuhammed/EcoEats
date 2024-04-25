@@ -1,0 +1,9 @@
+.button:disabled {
+    background-color: red !important;
+}
+
+h2{
+    font-weight: normal;
+    font-size: 40px;
+    font-family:sans-serif; 
+}
