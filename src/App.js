@@ -26,6 +26,7 @@ import Toaster from 'react-hot-toast';
 import app from './FireBase.config';
 import Charities from './components/Charities/Charities';
 import StoreDetails from './components/Store/StoreDetails';
+import AllProducts from './components/Products/AllProducts';
 
 function App() {
   const [toggle, setToggle] = useState(false);
@@ -49,6 +50,8 @@ function App() {
             <Route path="/store/:id" element={<StoreDetails />} />
             <Route path='/profile/:id' element={<Profile />} />
             <Route path='about' element={<About />} />
+            <Route path="/AllProducts" element={<AllProducts />} />
+
 
 
 
