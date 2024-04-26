@@ -47,7 +47,7 @@ function StoreDetails() {
         <br></br>
         <div className="button-gp">
           <Link to={`/Store`}> <Button className='btn-store'>Back</Button></Link>
-          <Link to={`/donation`}> <Button className='btn-buyy'>Let's Shop</Button></Link>
+          <Link to={`/AllProducts`}> <Button className='btn-buyy'>Let's Shop</Button></Link>
         </div>
 
 

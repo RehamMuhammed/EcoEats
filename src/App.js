@@ -13,7 +13,6 @@ import Contact from './components/Contact/Contact';
 import Aboutus from './components/Aboutus/Aboutus';
 import { useState } from 'react';
 
-import CharityList from './components/Charities/CharityList'
 import CharityDetails from './components/Charities/CharityDetails';
 import Stores from './components/Store/Stores'
 import Profile from './components/Profile/Profile';
@@ -27,6 +26,7 @@ import Toaster from 'react-hot-toast';
 import app from './FireBase.config';
 import Charities from './components/Charities/Charities';
 import StoreDetails from './components/Store/StoreDetails';
+import AllProducts from './components/Products/AllProducts';
 
 function App() {
   const [toggle, setToggle] = useState(false);
@@ -45,11 +45,12 @@ function App() {
             <Route path="/contactus" element={<Contact />} />
             <Route path="/aboutus" element={<Aboutus />} />
             <Route path="/charities/:id" element={<CharityDetails />} />
-            <Route path="/donation" element={<CharityList />} />
             <Route path="/store" element={<Stores />} />
             <Route path="/store/:id" element={<StoreDetails />} />
             <Route path='/profile/:id' element={<Profile />} />
             <Route path='about' element={<About />} />
+            <Route path="/AllProducts" element={<AllProducts />} />
+
 
 
 
