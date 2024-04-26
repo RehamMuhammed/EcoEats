@@ -1,0 +1,35 @@
+.list-card-container {
+    border: 1px #056365 solid;
+    border-radius: 10px;
+    font-size: 20px;
+
+
+}
+
+.list-card-titles {
+    border-right: 1px #056365 solid;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    margin: 1rem 2rem 1rem 0;
+    padding: 1rem;
+    width: 200px;
+    justify-content: center;
+}
+
+.list-btn {
+    background-color: #056365;
+    text-align: center;
+    color: #e9ecef;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 1rem 3rem;
+    border-radius: 10px;
+    margin-right: 3rem;
+
+}
+
+.list-btn :hover {
+    background-color: #056365;
+    color: black;
+}

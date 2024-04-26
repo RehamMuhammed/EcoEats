@@ -13,11 +13,10 @@ import Contact from './components/Contact/Contact';
 import Aboutus from './components/Aboutus/Aboutus';
 import { useState } from 'react';
 
-import CharityList from './components/Charities/CharityList'
+import AllCharities from './components/CharityList/AllCharities'
 import CharityDetails from './components/Charities/CharityDetails';
 import Stores from './components/Store/Stores'
 import Profile from './components/Profile/Profile';
-
 
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -45,7 +44,7 @@ function App() {
             <Route path="/contactus" element={<Contact />} />
             <Route path="/aboutus" element={<Aboutus />} />
             <Route path="/charities/:id" element={<CharityDetails />} />
-            <Route path="/donation" element={<CharityList />} />
+            <Route path="/donation" element={<AllCharities />} />
             <Route path="/store" element={<Stores />} />
             <Route path="/store/:id" element={<StoreDetails />} />
             <Route path='/profile/:id' element={<Profile />} />

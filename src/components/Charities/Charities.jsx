@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 import CharityCard from './CharityCard';
+import ListCard from '../CharityList/ListCard';
 
 function Charities() {
   const [charities, setCharities] = useState([])
