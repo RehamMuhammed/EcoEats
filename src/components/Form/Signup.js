@@ -64,12 +64,13 @@ export default function Form() {
                         <div className='d-flex text-dark gap-4'>
                             <div className='d-flex text-dark gap-4'>
                                 <div className='d-flex justify-content-center align-items-center gap-4'>
-                                    <input type="radio" value={"Female"} name='gender' {...register("gender")} />
-                                    <label style={{ color: 'pink', textShadow: '1px 1px 1px #2c2d34 ', fontSize: '15px' }}>Female</label>
-                                </div>
-                                <div className='d-flex justify-content-center align-items-center gap-4'>
                                     <input type="radio" value={"Male"} name='gender' {...register("gender")} />
                                     <label style={{ color: 'lightblue', textShadow: '1px 1px 1px #2c2d34 ', fontSize: '15px' }}>Male</label>
+                                </div>
+                                <div className='d-flex justify-content-center align-items-center gap-4'>
+                                    <input type="radio" value={"Female"} name='gender' {...register("gender")} />
+                                    <label style={{ color: 'pink', textShadow: '1px 1px 1px #2c2d34 ', fontSize: '15px' }}>Female</label>
+
                                 </div>
                             </div>
                         </div>

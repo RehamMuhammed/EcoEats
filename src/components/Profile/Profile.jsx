@@ -17,7 +17,7 @@ function Profile() {
         try {
             await setDoc(docRef, data);
             toast.success("HEHEHEHEHEH")
-            // alert("Updated Successfully")
+            alert("Updated Successfully")
         } catch (e) {
             console.log("error: ", e)
         } finally {
@@ -71,12 +71,13 @@ function Profile() {
                             <div className='d-flex text-dark gap-4'>
                                 <div className='d-flex justify-content-center align-items-center gap-4'>
                                     <label className='plabels'>Gender :</label>
-                                    <input type="radio" value={"Female"} name='gender' {...register("gender")} />
-                                    <label style={{ color: 'pink', textShadow: '1px 1px 1px #2c2d34 ', fontSize: '20px' }}>Female</label>
-                                </div>
-                                <div className='d-flex justify-content-center align-items-center gap-4'>
                                     <input type="radio" value={"Male"} name='gender' {...register("gender")} />
                                     <label style={{ color: 'lightblue', textShadow: '1px 1px 1px #2c2d34 ', fontSize: '20px' }}>Male</label>
+
+                                </div>
+                                <div className='d-flex justify-content-center align-items-center gap-4'>
+                                    <input type="radio" value={"Female"} name='gender' {...register("gender")} />
+                                    <label style={{ color: 'pink', textShadow: '1px 1px 1px #2c2d34 ', fontSize: '20px' }}>Female</label>
                                 </div>
                             </div>
                             <button className=' button-btn button   ' disabled={isLoading}>{isLoading ? 'Loading...' : 'Update Profile'}</button>
