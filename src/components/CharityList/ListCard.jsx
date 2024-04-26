@@ -9,7 +9,7 @@ function ListCard({ AllCharities }) {
             <div className='d-flex  justify-content-between list-card-container align-items-center ' style={{ width: '45%' }}>
                 <div className='d-flex align-items-center' >
                     <div className='list-card-titles'>
-                        <Card.Text className='text-dark shadow-none truncate-ellipsis'>{AllCharities.name}</Card.Text>
+                        <Card.Text className='text-dark shadow-none truncate-ellipsis' title={AllCharities.name}>{AllCharities.name}</Card.Text>
                     </div>
                     <div className='my-3'>
                         <Card.Text className='text-dark shadow-none'> Family Members: {AllCharities.familyCount}</Card.Text>
