@@ -34,21 +34,23 @@ function App() {
   return (
     <div>
       <Router>
-        <Navbar toggle={toggle} setToggle={setToggle}/>
-        <div style={{ minHeight: "100vh"}}>
+        <Navbar toggle={toggle} setToggle={setToggle} />
+        <div style={{ minHeight: "100vh" }}>
           <Routes>
             <Route path="/donation-form" element={<DonationThoSoYk />} />
             <Route path="/charities" element={<Charities />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
             <Route path="/buy" element={<BuyHome />} />
-            <Route path="/contactus" element={<Contact/>} />
-            <Route path="/aboutus" element={<Aboutus/>} />
-            <Route path="/charities/:id" element={<CharityDetails/>} />
-            <Route path="/donation" element={<CharityList/>} />
-            <Route path="/store" element={<Stores/>} />
-            <Route path="/store/:id" element={<StoreDetails/>} />
+            <Route path="/contactus" element={<Contact />} />
+            <Route path="/aboutus" element={<Aboutus />} />
+            <Route path="/charities/:id" element={<CharityDetails />} />
+            <Route path="/donation" element={<CharityList />} />
+            <Route path="/store" element={<Stores />} />
+            <Route path="/store/:id" element={<StoreDetails />} />
             <Route path='/profile/:id' element={<Profile />} />
+            <Route path='about' element={<About />} />
+
 
 
             <Route path="/" element={<Home />} />
@@ -58,7 +60,7 @@ function App() {
 
 
         <Footer toggle={toggle} />
-        
+
       </Router>
 
     </div>

@@ -48,41 +48,44 @@ function Profile() {
                 <div className="row justify-content-center">
                     <div className="col-8 w-full">
                         <br></br>
-                        <br></br>
-                        <br></br>
-                        <h2 className='text-center mt-5'>Profile</h2>
+                        <h1 className='text-center mt-5' style={{ color: '#1254' }}>Profile</h1>
                         <form id='form' className='flex flex-col align-items-stretch' onSubmit={handleSubmit(onSubmit)}>
-                            <input type="text" {...register("username")} placeholder='Username' />
-                            <input type="text" {...register("email", { pattern: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/ })} placeholder='Email' />
+                            <label className='plabels'>Name :</label>
+                            <input type="text" className='profile-containers' {...register("username")} placeholder='Username' />
+                            <label className='plabels'>Email :</label>
+                            <input type="text" className='profile-containers' {...register("email", { pattern: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/ })} placeholder='Email' />
                             <span className='text-danger'>
                                 {errors.email?.type === "pattern" && "Invalid Email"}
                             </span>
+                            <label className='plabels'>Mobile Number :</label>
                             <input type="text" {...register("mobile", { required: true, maxLength: 11, pattern: /^01[0125][0-9]{8}$/ })} placeholder='Mobile Number' />
                             <span className='text-danger'>
                                 {errors.mobile?.type === "required" && "Mobile Number is required"}
                                 {errors.mobile?.type === "maxLength" && "Max Length Exceed"}
                                 {errors.mobile?.type === "pattern" && "Invalid Phone Number"}
                             </span>
+                            <label className='plabels'>City :</label>
                             <input type="text" {...register("city")} placeholder='City' />
+                            <label className='plabels'>Country :</label>
                             <input type="text" {...register("country")} placeholder='Country' />
                             <div className='d-flex text-dark gap-4'>
                                 <div className='d-flex justify-content-center align-items-center gap-4'>
-                                    <label>Female</label>
+                                    <label className='plabels'>Gender :</label>
                                     <input type="radio" value={"Female"} name='gender' {...register("gender")} />
+                                    <label style={{ color: 'pink', textShadow: '1px 1px 1px #2c2d34 ', fontSize: '20px' }}>Female</label>
                                 </div>
                                 <div className='d-flex justify-content-center align-items-center gap-4'>
-                                    <label>Male</label>
                                     <input type="radio" value={"Male"} name='gender' {...register("gender")} />
+                                    <label style={{ color: 'lightblue', textShadow: '1px 1px 1px #2c2d34 ', fontSize: '20px' }}>Male</label>
                                 </div>
                             </div>
-                            <button className='btn button' disabled={isLoading}>{isLoading ? 'Loading...' : 'Update Profile'}</button>
-
+                            <button className=' button-btn button   ' disabled={isLoading}>{isLoading ? 'Loading...' : 'Update Profile'}</button>
                         </form>
 
                     </div>
-                </div>
-            </section>
-        </div>
+                </div >
+            </section >
+        </div >
     )
 }
 

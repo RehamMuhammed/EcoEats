@@ -2,8 +2,27 @@
     background-color: red !important;
 }
 
-h2{
+.button-btn {
+    font-size: 20px;
+    background-color: grey;
+    color: rgb(0, 0, 0);
+    text-shadow: 20px;
+    padding: 15px 15px;
+    margin: 10px 0px;
+    border: 30px;
+    /* border-radius: 25px; */
+    cursor: pointer;
+    width: 320px;
+}
+
+h1 {
+    padding-top: 20px;
+    text-align: center;
     font-weight: normal;
-    font-size: 40px;
-    font-family:sans-serif; 
+    font-size: 50px;
+}
+
+.plabels {
+    color: black;
+    font-size: 18px;
 }
