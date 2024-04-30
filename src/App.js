@@ -30,6 +30,7 @@ import AllProducts from './components/Products/AllProducts';
 import Cart from './components/cart/Cart';
 import { useSnapshot } from 'valtio';
 import { cartStore } from './valtio/Cart';
+import DonationForm from './components/CharityList/DonatationForm';
 
 function App() {
   const snapshot = useSnapshot(cartStore);
@@ -55,6 +56,7 @@ function App() {
             <Route path='/profile/:id' element={<Profile />} />
             <Route path='about' element={<About />} />
             <Route path="/AllProducts" element={<AllProducts />} />
+            <Route path="/DonationForm" element={<DonationForm />} />
 
 
 

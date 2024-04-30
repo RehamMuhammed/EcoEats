@@ -1,0 +1,133 @@
+.container2 {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(rgba(255, 255, 255, 0.148), rgba(217, 214, 214, 0.169)), url("../../images/donationform.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+label {
+    color: #F5F5F5;
+    text-shadow: 1px 1px 1px #605e5e;
+}
+
+h1 {
+    color: #F5F5F5;
+    text-shadow: 1px 1px 1px #605e5e;
+}
+
+p {
+    color: #F5F5F5;
+    text-shadow: 1px 1px 1px #605e5e;
+}
+
+input[type=textt],
+input[type=number] {
+    width: 75%;
+    padding: 10px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #F5F5F5;
+}
+
+hr {
+    border: 1px solid #f9f9f9;
+    margin-bottom: 5px;
+}
+
+.donbutton {
+    background-color: #056365;
+    color: white;
+    padding: 15px 15px;
+    margin: 10px 0px;
+    border: none;
+    cursor: pointer;
+    width: 620px;
+}
+
+.donbutton.button {
+    transition: all 0.5s;
+    cursor: pointer;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0, .7);
+}
+
+.donbutton.button {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    text-decoration: none;
+    text-align: center;
+}
+
+.donbutton.button:after {
+    content: ">>";
+    position: absolute;
+    opacity: 0;
+    top: 14px;
+    right: -20px;
+    transition: 0.5s;
+
+}
+
+.donbutton.button:hover {
+    padding-right: 24px;
+    padding-left: 18px;
+    background-color: rgb(184, 212, 197);
+
+}
+
+.donbutton.button:hover:after {
+    opacity: 1;
+    right: 10px;
+
+}
+
+.file-input {
+    padding: 8px;
+    background-color: #f9f9f9;
+    color: #333;
+    width: 290px;
+}
+
+.quantity-input {
+    width: 180px;
+    padding: 8px;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #F5F5F5;
+}
+
+.customhr {
+    border: 1px solid #f9f9f9;
+    margin-top: 5px;
+    width: 110px;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+}
+
+.form form {
+    backdrop-filter: blur(10px);
+    width: 40%;
+    border: 1px solid #605e5e;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 20px 0px;
+}
+
+.button-gp {
+    padding-top: 10px;
+    display: flex;
+    gap: 30px;
+}
+
+.comments {
+    height: 150px;
+}

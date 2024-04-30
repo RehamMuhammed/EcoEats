@@ -33,7 +33,7 @@ function AllCharities() {
     <div className='product-container'>
       {/* <input value={searchValue} class="form-control me-2" type="search" placeholder="Search" aria-label="Search" onChange={handleSearch} /> */}
 
-      <div className='d-flex flex-wrap py-5 gap-5 justify-content-center' >
+      <div className='d-flex flex-wrap py-5 gap-5 justify-content-center container5' style={{ height: "100vh" }} >
         {
           AllCharities.map(AllCharities => <ListCard key={AllCharities.id} AllCharities={AllCharities} />)
         }

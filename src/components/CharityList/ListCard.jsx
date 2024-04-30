@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 function ListCard({ AllCharities }) {
     return (
         <>
-            <div className='d-flex  justify-content-between list-card-container align-items-center ' style={{ width: '45%' }}>
+            <div className='d-flex  justify-content-between list-card-container align-items-center card-list' style={{ width: '45%' }}>
                 <div className='d-flex align-items-center' >
                     <div className='list-card-titles'>
                         <Card.Text className='text-dark shadow-none truncate-ellipsis' title={AllCharities.name}>{AllCharities.name}</Card.Text>
@@ -19,9 +19,10 @@ function ListCard({ AllCharities }) {
                 </div>
             </div >
             <div className='d-flex align-items-center'>
-                <Link to={`/AllCharities/${AllCharities._id}`}  ><button className='list-btn' >Donate</button></Link>
+                <Link to={`/DonationForm`}  ><button className='list-btn' >Donate</button></Link>
 
             </div>
+
         </>
 
 
