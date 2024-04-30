@@ -27,6 +27,7 @@ import app from './FireBase.config';
 import Charities from './components/Charities/Charities';
 import StoreDetails from './components/Store/StoreDetails';
 import AllProducts from './components/Products/AllProducts';
+import DonationForm from './components/CharityList/DonatationForm';
 
 function App() {
   const [toggle, setToggle] = useState(false);
@@ -51,6 +52,7 @@ function App() {
             <Route path='/profile/:id' element={<Profile />} />
             <Route path='about' element={<About />} />
             <Route path="/AllProducts" element={<AllProducts />} />
+            <Route path="/DonationForm" element={<DonationForm />} />
 
 
 
