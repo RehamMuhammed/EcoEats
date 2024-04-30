@@ -47,7 +47,6 @@ function Profile() {
             <section>
                 <div className="row justify-content-center">
                     <div className="col-8 w-full">
-                        <br></br>
                         <h1 className='text-center mt-5' style={{ color: '#1254' }}>Profile</h1>
                         <form id='form' className='flex flex-col align-items-stretch' onSubmit={handleSubmit(onSubmit)}>
                             <label className='plabels'>Name :</label>
