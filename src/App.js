@@ -27,8 +27,12 @@ import app from './FireBase.config';
 import Charities from './components/Charities/Charities';
 import StoreDetails from './components/Store/StoreDetails';
 import AllProducts from './components/Products/AllProducts';
+import Cart from './components/cart/Cart';
+import { useSnapshot } from 'valtio';
+import { cartStore } from './valtio/Cart';
 
 function App() {
+  const snapshot = useSnapshot(cartStore);
   const [toggle, setToggle] = useState(false);
 
   return (
@@ -62,7 +66,7 @@ function App() {
 
 
         <Footer toggle={toggle} />
-
+        {cartStore.isVisible && <Cart />}
       </Router>
 
     </div>

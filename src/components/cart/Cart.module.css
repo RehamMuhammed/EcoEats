@@ -1,0 +1,32 @@
+.cart_container {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.2);
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cart_sidebar {
+    width: 30%;
+    background-color: white;
+}
+
+.cart_sidebar h1 {
+    color: #444;
+    text-decoration: underline;
+}
+
+.close_btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.list_container {}
+
+.list_item {}

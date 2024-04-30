@@ -35,6 +35,9 @@ function StoreDetails() {
   }
   return (
     <div className='details-container'>
+        <br></br>
+        <br></br>
+        <br></br>
       <div className='storeimg'>
         <Card.Img variant="top" src={Stores.image} style={{ width: '23rem', height: '23rem' }} />
       </div>

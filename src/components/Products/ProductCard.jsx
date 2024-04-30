@@ -3,6 +3,7 @@ import Card from 'react-bootstrap/Card';
 import './AllProducts';
 import { Link } from 'react-router-dom';
 import AllProducts from './AllProducts';
+import { AddToCart } from '../../valtio/Cart';
 
 
 function ProductCard({ AllProducts }) {
@@ -17,7 +18,7 @@ function ProductCard({ AllProducts }) {
                 <Card.Text className='truncate-ellipsis  text-dark shadow-none' title={AllProducts.description}> {AllProducts.description}</Card.Text>
                 {/* <Card.Text className='text-dark shadow-none'> {AllProducts.price}</Card.Text> */}
                 <br></br>
-                <Link to={`/AllProducts/${AllProducts._id}`}  ><button className='product-btn' >{AllProducts.price}</button></Link>
+                <button className='product-btn' onClick={() => AddToCart(AllProducts)}>{AllProducts.price}</button>
             </Card.Body>
         </Card>
         </div>
