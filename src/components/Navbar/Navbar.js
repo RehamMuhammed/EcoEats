@@ -12,12 +12,15 @@ import useFirebaseUser from '../../hooks/useFirebaseUser';
 import { signOut } from 'firebase/auth';
 import { auth } from '../../FireBase.config';
 import { OrangePaths } from '../../constants/paths';
+import { useSnapshot } from 'valtio';
+import { cartStore, toggleCart } from '../../valtio/Cart';
 
 
 
 
 
 const Navbar = ({ toggle, setToggle }) => {
+  const snapshot = useSnapshot(cartStore)
   const user = useFirebaseUser();
   const navigate = useNavigate();
   const pathname = window.location.pathname;
@@ -37,8 +40,8 @@ const Navbar = ({ toggle, setToggle }) => {
   }
 
   useEffect(() => {
-    for(let key of OrangePaths) {
-      if ( pathname.includes(key) ) setToggle(true)
+    for (let key of OrangePaths) {
+      if (pathname.includes(key)) setToggle(true)
     }
   }, [pathname]);
 
@@ -61,6 +64,7 @@ const Navbar = ({ toggle, setToggle }) => {
       <ul>
         {user ? (
           <>
+            <li onClick={() => toggleCart(true)} className='nav-link cart-counter'>Cart <span>{snapshot.cart.length}</span></li>
             <li><Link className="nav-link" to="/aboutus">About Us</Link></li>
             <li><Link className="nav-link" to="/contactus">Contact Us</Link></li>
             <li><Link className="nav-link" to={`/profile/${user.uid}`}>Profile</Link></li>

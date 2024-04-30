@@ -105,4 +105,23 @@
     transition: all 0.2s ease;
     right: 25%; 
   }
+
+  .cart-counter {
+    position: relative;
+  }
+
+  .cart-counter span {
+    position: absolute;
+    top: -5%;
+    right: -25%;
+    background-color: gray;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+  }
  
