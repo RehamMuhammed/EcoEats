@@ -19,7 +19,7 @@ function Stores() {
     setSearchValue(e.target.value)
   }
   useEffect(() => {
-    const filterStores= Stores.filter(stores => {
+    const filterStores = Stores.filter(stores => {
       console.log(Stores.storeName.includes(searchValue))
       console.log(Stores.storeName, searchValue)
       return (Stores.storeName.includes(searchValue))
@@ -29,7 +29,7 @@ function Stores() {
   }, [searchValue])
 
   return (
-    <div className='store-container' style={{ backgroundImage: `url(${require('../../images/white.jpg')})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
+    <div className='store-container' style={{ backgroundImage: `url(${require('../../images/white.jpg')})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
       {/* <input value={searchValue} class="form-control me-2" type="search" placeholder="Search" aria-label="Search" onChange={handleSearch} /> */}
 
       <div className='d-flex flex-wrap py-5 gap-5 justify-content-center' >

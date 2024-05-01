@@ -11,12 +11,12 @@
 
 .cart_sidebar {
     width: 30%;
-    background-color: white;
+    background-color: rgb(238, 234, 234);
 }
 
 .cart_sidebar h1 {
     color: #444;
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
 
 .close_btn {
@@ -27,6 +27,29 @@
     cursor: pointer;
 }
 
-.list_container {}
+.list_container {
+    backdrop-filter: 5px;
+    border-radius: 12px;
+    background-color: rgba(195, 195, 195, 0.816);
+    color: #333;
+    font-size: 23px;
+    width: 80%;
+    padding-top: 20px;
+    padding-left: 30px;
+    margin-left: 60px;
+}
 
-.list_item {}
+.list_item {
+    color: #333;
+}
+
+.hr-cart {
+    border: 1px solid #0e0e0e;
+
+}
+
+.h3 {
+    padding-top: 20px;
+    padding-left: 30px;
+    margin-left: 60px;
+}

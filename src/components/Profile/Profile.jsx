@@ -79,7 +79,7 @@ function Profile() {
                                     <label style={{ color: 'pink', textShadow: '1px 1px 1px #2c2d34 ', fontSize: '20px' }}>Female</label>
                                 </div>
                             </div>
-                            <button className=' button-btn button   ' disabled={isLoading}>{isLoading ? 'Loading...' : 'Update Profile'}</button>
+                            <button className=' button-btn button   ' disabled={isLoading}>{isLoading ? 'Loading...' : 'Update Profile'}</button><br></br>
                         </form>
 
                     </div>
