@@ -39,7 +39,7 @@ const DonationThoSoYk = () => {
 	}
 
 	return (
-		<div className="container2">
+		<div className="container12">
 			<div className="form">
 				<form onSubmit={handleSubmit}>
 					<h1>Donate To Someone You Know</h1>
