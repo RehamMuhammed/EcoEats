@@ -29,7 +29,7 @@ const DonationForm = () => {
             const collectionRef = collection(db, "charity donations")
             await addDoc(collectionRef, formValues)
             console.log("Hehehe, thank you for your donation!")
-            navigate("/")
+            navigate("/done")
         }
         catch (e) {
             console.log(e)

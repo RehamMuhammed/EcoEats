@@ -84,7 +84,7 @@ const DonationThoSoYk = () => {
 					<hr></hr>
 
 					<div className="button-gp">
-						<Link class="donbutton button" to="/"> Back to Home Page </Link>
+						<Link class="donbutton button" to="/done"> Back to Home Page </Link>
 						<button type="submit" class="donbutton button">Donate Now</button>
 					</div>
 				</form>
