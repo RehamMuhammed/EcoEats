@@ -74,7 +74,7 @@ const DonationForm = () => {
                     <hr></hr>
 
                     <div className="button-gp">
-                        <Link class="donbutton button" to="/"> Back to Home Page </Link>
+                        <Link class="donbutton button" to="/donation"> Back to Charity List </Link>
                         <button type="submit" class="donbutton button">Donate Now</button>
                     </div>
                 </form>

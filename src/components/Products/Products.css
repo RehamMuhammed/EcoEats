@@ -33,18 +33,27 @@
 
 .product-btn:hover::before {
     top: 0%;
+
 }
 
 .product-btn:hover {
     background-color: #757572;
     color: #FDA143;
-    transition: 0.5s;
+    /* transition: 0.5s; */
+    border: 5px solid #a2a29e;
+
 }
+
+/* .button:disabled {
+    background-color: rgb(141, 45, 45) !important;
+} */
+
 
 .bg-main:hover {
     background-color: rgb(150, 149, 149);
     border-color: black;
     transition: 0.5s;
+
 
 }
 

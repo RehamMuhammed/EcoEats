@@ -15,7 +15,7 @@ function Cart() {
     return (
         <div className={`${Styles.cart_container}`}>
             <div className={`${Styles.cart_sidebar}`}>
-                <br></br><br></br><br></br>
+                <br></br><br></br>
                 <div className={`${Styles.cart_border}`}>
                     <h1>Your Cart: </h1>
                     <hr className={`${Styles.cart_hr}`}></hr>
@@ -30,7 +30,6 @@ function Cart() {
                                         <div className={`${Styles.cart_price}`}>
                                             {item.quantity}
                                             &nbsp;x $ {item.price}
-
                                         </div>
                                         <button className={`${Styles.delete_button}`} onClick={() => RemoveFromCart(item._id)}>
                                             <img src={trashIcon} />
