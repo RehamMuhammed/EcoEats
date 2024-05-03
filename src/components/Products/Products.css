@@ -28,6 +28,7 @@
     left: 0%;
     color: black;
     background-color: #a2a29e;
+
 }
 
 .product-btn:hover::before {
@@ -37,11 +38,14 @@
 .product-btn:hover {
     background-color: #757572;
     color: #FDA143;
+    transition: 0.5s;
 }
 
 .bg-main:hover {
     background-color: rgb(150, 149, 149);
     border-color: black;
+    transition: 0.5s;
+
 }
 
 .truncate-ellipsis {

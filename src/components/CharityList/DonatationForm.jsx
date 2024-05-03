@@ -57,7 +57,7 @@ const DonationForm = () => {
                     <hr className="customhr"></hr>
 
                     <p style={{ textSizeAdjust: '1px' }}> Food Description:</p>
-                    <input type="textt" className="placeholder-text" placeholder="Enter the food details you're going to donate with." name="number" required style={{ width: '450px', height: '150px' }} onChange={(e) => updateValues("food_description", e.target.value)}></input>
+                    <input type="textt" className="placeholder-text" placeholder="Enter the food details you're going to donate with." name="number" required style={{ width: '75%', height: '150px' }} onChange={(e) => updateValues("food_description", e.target.value)}></input>
                     <br></br>
 
 
