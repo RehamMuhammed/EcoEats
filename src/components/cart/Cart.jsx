@@ -2,7 +2,7 @@ import { useSnapshot } from 'valtio';
 import Styles from './Cart.module.css';
 import { MinusOne, PlusOne, RemoveFromCart, cartStore, toggleCart } from '../../valtio/Cart';
 import { Link } from 'react-router-dom';
-
+import trashIcon from '../../images/trash-bin.png';
 
 
 function Cart() {
@@ -21,19 +21,23 @@ function Cart() {
                                 <div className={`${Styles.list_item}`}> {item.name}
                                     <br></br>
                                     {/* Quantity: {item.quantity}  <br></br> */}
-                                    <div className='d-flex'>
+                                    <div className='d-flex justify-content-between' style={{ alignSelf: "stretch" }}>
                                         <div className={`${Styles.cart_price}`}>
                                             {item.quantity}
-                                        </div>
-                                        &nbsp;x $ {item.price}
-                                        <button className={`${Styles.delete_button}`} onClick={() => RemoveFromCart(item._id)}>Delete</button>
-                                    </div>
+                                            &nbsp;x $ {item.price}
 
-                                    <hr></hr>
-                                    <div>
-                                        <span onClick={() => PlusOne(item._id)}>add</span>
-                                        <span onClick={() => MinusOne(item._id)}>remove</span>
+                                        </div>
+                                        <button className={`${Styles.delete_button}`} onClick={() => RemoveFromCart(item._id)}>
+                                            <img src={trashIcon} />
+                                        </button>
                                     </div>
+                                    <div className={`${Styles.quantity_container}`}>
+                                        <button className={`${Styles.plus}`} onClick={() => PlusOne(item._id)}>+</button>
+                                        <button>{item.quantity}</button>
+                                        <button disabled={item.quantity === 1} className={`${Styles.minus}`} onClick={() => MinusOne(item._id)}>-</button>
+                                    </div>
+                                    <hr></hr>
+
                                 </div>
                             )))}
                         </div>
