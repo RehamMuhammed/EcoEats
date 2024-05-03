@@ -1,0 +1,15 @@
+.pay_btn {
+    background-color: #FDA143;
+    color: white;
+    padding: 15px 15px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 15%;
+    text-decoration: none;
+
+}

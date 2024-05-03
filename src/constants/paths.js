@@ -1,1 +1,1 @@
-export const OrangePaths = ['store' , 'Products'];
+export const OrangePaths = ['store', 'Products', 'Payment', 'completion'];

@@ -1,8 +1,6 @@
-// import logo from './images/logo.png';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import Header from './components/Header/Header';
-// import Donation from './components/Options/Donation';
 import Signup from './components/Form/Signup';
 import Login from './components/Form/Login';
 import About from './components/About/About';
@@ -31,6 +29,9 @@ import Cart from './components/cart/Cart';
 import { useSnapshot } from 'valtio';
 import { cartStore } from './valtio/Cart';
 import DonationForm from './components/CharityList/DonatationForm';
+import Payment from './components/Payment/Payment';
+import Completion from './components/Payment/Completion';
+import DonationDone from './components/CharityList/DonationDone';
 
 function App() {
   const snapshot = useSnapshot(cartStore);
@@ -57,6 +58,9 @@ function App() {
             <Route path='about' element={<About />} />
             <Route path="/AllProducts" element={<AllProducts />} />
             <Route path="/DonationForm" element={<DonationForm />} />
+            <Route path="/Payment" element={<Payment />} />
+            <Route path="/completion" element={<Completion />} />
+            <Route path="/done" element={<DonationDone />} />
 
 
 

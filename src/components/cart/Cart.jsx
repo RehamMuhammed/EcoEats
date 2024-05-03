@@ -1,11 +1,16 @@
 import { useSnapshot } from 'valtio';
 import Styles from './Cart.module.css';
 import { MinusOne, PlusOne, RemoveFromCart, cartStore, toggleCart } from '../../valtio/Cart';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import trashIcon from '../../images/trash-bin.png';
 
 
 function Cart() {
+    const navigate = useNavigate()
+    const onProceed = () => {
+        toggleCart(false)
+        navigate("Payment")
+    }
     const snapshot = useSnapshot(cartStore);
     return (
         <div className={`${Styles.cart_container}`}>
@@ -53,7 +58,7 @@ function Cart() {
                     <>
                         <h3 style={{ display: 'flex', justifyContent: "center" }}>Subtotal: $&nbsp;{cartStore.totalprice}</h3>
                         <div style={{ display: 'flex', justifyContent: "center" }}>
-                            <button type="submit" className={`${Styles.cart_button}`}>Proceed To Checkout</button>
+                            <button onClick={onProceed} className={`${Styles.cart_button}`}>Proceed To Checkout</button>
                         </div>
                     </>
                 ) : (
