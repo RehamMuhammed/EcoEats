@@ -31,7 +31,7 @@ const DonationThoSoYk = () => {
 			const collectionRef = collection(db, "donations")
 			await addDoc(collectionRef, formValues)
 			console.log("Hehehe, thank you for your donation!")
-			navigate("/")
+			navigate("/done")
 		}
 		catch (e) {
 			console.log(e)

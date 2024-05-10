@@ -19,18 +19,28 @@ function Charities() {
     setSearchValue(e.target.value)
   }
   useEffect(() => {
-    const filterCharities = charities.filter(charity => {
-      console.log(charity.CharityName.includes(searchValue))
-      console.log(charity.CharityName, searchValue)
-      return (charity.CharityName.includes(searchValue))
-    })
-    console.log(filterCharities)
-    setFilter(filterCharities)
+    if (searchValue !== "") {
+      const filter = charities?.filter(({ CharityName }) => {
+        return CharityName
+          .toLocaleLowerCase()
+          .includes(searchValue.toLocaleLowerCase());
+      });
+      setFilter(filter || []);
+    } else {
+      setFilter(charities || []);
+    }
+    // const filterCharities = charities.filter(charity => {
+    //   console.log(charity.CharityName.includes(searchValue))
+    //   console.log(charity.CharityName, searchValue)
+    //   return (charity.CharityName.includes(searchValue))
+    // })
+    // console.log(filterCharities)
+    // setFilter(filterCharities)
   }, [searchValue])
 
   return (
     <div className='container3'>
-      {/* <input value={searchValue} class="form-control me-2" type="search" placeholder="Search" aria-label="Search" onChange={handleSearch} /> */}
+      <input value={searchValue} class="form-control me-2" type="search" placeholder="Search" aria-label="Search" onChange={handleSearch} />
 
       <div className='d-flex flex-wrap py-5 gap-5 justify-content-center' >
         {

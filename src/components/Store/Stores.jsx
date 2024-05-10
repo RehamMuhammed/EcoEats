@@ -19,22 +19,33 @@ function Stores() {
     setSearchValue(e.target.value)
   }
   useEffect(() => {
-    const filterStores = Stores.filter(stores => {
-      console.log(Stores.storeName.includes(searchValue))
-      console.log(Stores.storeName, searchValue)
-      return (Stores.storeName.includes(searchValue))
-    })
-    console.log(filterStores)
-    setFilter(filterStores)
+
+    if (searchValue !== "") {
+      const filter = Stores?.filter(({ storeName }) => {
+        return storeName
+          .toLocaleLowerCase()
+          .includes(searchValue.toLocaleLowerCase());
+      });
+      setFilter(filter || []);
+    } else {
+      setFilter(Stores || []);
+    }
+    // const filterStores = Stores.filter(stores => {
+    //   console.log(Stores.storeName.includes(searchValue))
+    //   console.log(Stores.storeName, searchValue)
+    //   return (Stores.storeName.includes(searchValue))
+    // })
+    // console.log(filterStores)
+    // setFilter(filterStores)
   }, [searchValue])
 
   return (
-    <div className='store-container' style={{ backgroundImage: `url(${require('../../images/white.jpg')})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-      {/* <input value={searchValue} class="form-control me-2" type="search" placeholder="Search" aria-label="Search" onChange={handleSearch} /> */}
+    <div className='store-container' style={{ minHeight: '100vh', backgroundImage: `url(${require('../../images/white.jpg')})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <input value={searchValue} class="form-control me-2" type="search" placeholder="Search" aria-label="Search" onChange={handleSearch} />
 
       <div className='d-flex flex-wrap py-5 gap-5 justify-content-center' >
         {
-          Stores.map(Stores => <StoreCard key={Stores.id} Stores={Stores} />)
+          (searchValue === "" ? Stores : filter).map(Stores => <StoreCard key={Stores.id} Stores={Stores} />)
         }
       </div>
     </div>

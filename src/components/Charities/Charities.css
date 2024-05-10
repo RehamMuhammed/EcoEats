@@ -1,33 +1,30 @@
-
-.container3{
+.container3 {
     background: url("../../images/bgreen.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    min-height: 100vh;
 }
 
-.btn-view{
+.btn-view {
     justify-content: center;
     align-items: center;
     background-color: #056365;
     text-align: center;
     color: #e9ecef;
     font-size: 1em;
-    cursor: pointer;    
+    cursor: pointer;
     border-radius: 30px;
     border-style: none;
     padding: 1rem 3rem;
 }
 
 
-.btn-view:hover{
+.btn-view:hover {
     background-color: #056365;
-    color: black;  
-  }
+    color: black;
+}
 
-.bg-main:hover{
+.bg-main:hover {
     background-color: rgb(150, 149, 149);
     border-color: rgb(150, 149, 149);
 }
-
-
-
