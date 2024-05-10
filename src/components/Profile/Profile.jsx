@@ -1,15 +1,20 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import './Profile.css'
-import { Link, useParams } from 'react-router-dom';
+import { Link, Route, useNavigate, useParams } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
-import { db } from '../../FireBase.config';
-import { collection, doc, getDocs, setDoc } from 'firebase/firestore';
+import { auth, db } from '../../FireBase.config';
+import { collection, doc, getDocs, setDoc, deleteDoc } from 'firebase/firestore';
 import toast from 'react-hot-toast';
+import { deleteUser } from 'firebase/auth';
 
 function Profile() {
+    const navigate = useNavigate()
+
+
     const { id: userId } = useParams()
     const [userData, setUserData] = useState({});
     const [isLoading, setIsLoading] = useState(false);
+    const [isLoadingDelete, setIsLoadingDelete] = useState(false);
     const { register, handleSubmit, watch, formState: { errors }, setValue } = useForm()
     const onSubmit = async (data) => {
         setIsLoading(true);
@@ -41,6 +46,25 @@ function Profile() {
     useEffect(() => {
         getUsers()
     }, [])
+
+    const onDelete = async () => {
+        setIsLoadingDelete(true)
+        const user = auth.currentUser;
+        const userDocRef = doc(db, 'users', userId);
+        try {
+            await deleteUser(user)
+            await deleteDoc(userDocRef)
+            alert("Deleted Successfully")
+            navigate('/signup')
+
+        } catch (e) {
+            console.log("error: ", e)
+        } finally {
+            setIsLoadingDelete(false);
+        }
+
+    }
+
 
     return (
         <div style={{ backgroundImage: `url(${require('../../images/white2.jpg')})`, backgroundSize: 'cover', backgroundPosition: 'center', height: '100vh' }}>
@@ -79,7 +103,8 @@ function Profile() {
                                     <label style={{ color: 'pink', textShadow: '1px 1px 1px #2c2d34 ', fontSize: '20px' }}>Female</label>
                                 </div>
                             </div>
-                            <button className=' button-btn button   ' disabled={isLoading}>{isLoading ? 'Loading...' : 'Update Profile'}</button><br></br>
+                            <button className=' button-btn button   ' disabled={isLoading}>{isLoading ? 'Loading...' : 'Update Profile'}</button>
+                            <button onClick={onDelete} type='button' className=' button-btn button  bg-danger ' disabled={isLoadingDelete}>{isLoadingDelete ? 'Loading...' : 'Delete Account'}</button>
                         </form>
 
                     </div>
