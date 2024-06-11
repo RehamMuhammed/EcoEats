@@ -51,12 +51,12 @@ function App() {
             <Route path="/contactus" element={<Contact />} />
             <Route path="/aboutus" element={<Aboutus />} />
             <Route path="/charities/:id" element={<CharityDetails />} />
-            <Route path="/donation" element={<AllCharities />} />
+            <Route path="/donation/:charity" element={<AllCharities />} />
             <Route path="/store" element={<Stores />} />
             <Route path="/store/:id" element={<StoreDetails />} />
             <Route path='/profile/:id' element={<Profile />} />
             <Route path='about' element={<About />} />
-            <Route path="/AllProducts" element={<AllProducts />} />
+            <Route path="/AllProducts/:store" element={<AllProducts />} />
             <Route path="/DonationForm" element={<DonationForm />} />
             <Route path="/Payment" element={<Payment />} />
             <Route path="/completion" element={<Completion />} />

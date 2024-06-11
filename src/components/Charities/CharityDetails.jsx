@@ -41,7 +41,7 @@ function CharityDetails() {
         <br></br>
         <div className="button-gp">
           <Link to={`/charities`}> <Button className='btn-donate'>Back</Button></Link>
-          <Link to={`/donation`}> <Button className='btn-donate'>Donate</Button></Link>
+          <Link to={`/donation/${charity.CharityName}`}> <Button className='btn-donate'>Donate</Button></Link>
         </div>
 
 

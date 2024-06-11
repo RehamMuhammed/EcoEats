@@ -13,18 +13,18 @@ function StoreDetails() {
   const { id } = useParams();
   const [Stores, setStores] = useState("");
 
-  const fetchAllStores = useCallback( async () => {
+  const fetchAllStores = useCallback(async () => {
     try {
       const res = await fetch("http://localhost:8000/api/getStore")
       const { data } = await res.json()
-    const Stores = await data.find(Stores => Stores._id === id)
-    console.log(Stores)
-    setStores(Stores)
+      const Stores = await data.find(Stores => Stores._id === id)
+      console.log(Stores)
+      setStores(Stores)
 
     } catch (e) {
       console.log(e);
     }
-    
+
   }, []);
   useEffect(() => {
     fetchAllStores()
@@ -35,9 +35,9 @@ function StoreDetails() {
   }
   return (
     <div className='details-container'>
-        <br></br>
-        <br></br>
-        <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
       <div className='storeimg'>
         <Card.Img variant="top" src={Stores.image} style={{ width: '23rem', height: '23rem' }} />
       </div>
@@ -50,7 +50,7 @@ function StoreDetails() {
         <br></br>
         <div className="button-gp">
           <Link to={`/Store`}> <Button className='btn-store'>Back</Button></Link>
-          <Link to={`/AllProducts`}> <Button className='btn-buyy'>Let's Shop</Button></Link>
+          <Link to={`/AllProducts/${Stores.storeName}`}> <Button className='btn-buyy'>Let's Shop</Button></Link>
         </div>
 
 

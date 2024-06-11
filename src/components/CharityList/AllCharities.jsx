@@ -2,13 +2,16 @@ import { useCallback, useEffect, useState } from 'react';
 // import StoreCard from './StoreCard';
 import './List.css'
 import ListCard from './ListCard';
+import { useParams } from 'react-router-dom';
 
 function AllCharities() {
+  const { charity } = useParams()
+  console.log({ charity })
   const [AllCharities, setAllCharities] = useState([])
   const [filter, setFilter] = useState([])
   const [searchValue, setSearchValue] = useState("")
   const fetchData = useCallback(async () => {
-    const res = await fetch("http://localhost:8000/api/getAllCharityList")
+    const res = await fetch(`http://localhost:8000/api/charitylistmembers/charity/${charity}`)
     const result = await res.json()
     console.log(result)
     setAllCharities(result)
@@ -33,7 +36,7 @@ function AllCharities() {
     <div className='product-container'>
       {/* <input value={searchValue} class="form-control me-2" type="search" placeholder="Search" aria-label="Search" onChange={handleSearch} /> */}
 
-      <div className='d-flex flex-wrap py-5 gap-5 justify-content-center container5' style={{ height: "100vh" }} >
+      <div className='d-flex flex-wrap py-5 gap-5 justify-content-center container5' style={{ minHeight: "100vh" }} >
         {
           AllCharities.map(AllCharities => <ListCard key={AllCharities.id} AllCharities={AllCharities} />)
         }

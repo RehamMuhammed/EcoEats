@@ -2,16 +2,18 @@ import { useCallback, useEffect, useState } from 'react';
 // import StoreCard from './StoreCard';
 import './Products.css'
 import ProductCard from './ProductCard';
+import { useParams } from 'react-router-dom';
 
 function AllProducts() {
+  const { store } = useParams()
   const [AllProducts, setAllProducts] = useState([])
   const [filter, setFilter] = useState([])
   const [searchValue, setSearchValue] = useState("")
   const fetchData = useCallback(async () => {
-    const res = await fetch("http://localhost:8000/api/getAllProducts")
+    const res = await fetch(`http://localhost:8000/api/products/store/${store}`)
     const result = await res.json()
-    console.log( result )
-    setAllProducts( result )
+    console.log(result)
+    setAllProducts(result)
   }, [])
   useEffect(() => {
     fetchData()
